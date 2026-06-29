@@ -8,86 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Gloock&family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #F3F3F2; --ink: #1E1B28;
-      --periwinkle: #8892D8; --periwinkle-text: #5040A8;
-      --mint: #3EC9A7; --muted: #3D3934;
-      --pen-orange: #C75B2A;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: var(--bg); color: var(--ink);
-      font-family: 'Inclusive Sans', sans-serif; font-size: 1.0625rem; line-height: 1.65;
-      -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column;
-    }
-    h1, h2, h3 { font-family: 'Gloock', serif; font-weight: 400; line-height: 1.15; }
-    a { color: var(--periwinkle-text); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:focus-visible { outline: 2px solid var(--periwinkle-text); outline-offset: 3px; border-radius: 2px; }
-    .container { width: min(92%, 1080px); margin: 0 auto; }
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background-color: var(--bg); border-bottom: 1px solid rgba(92,88,117,0.18); padding: 1.1rem 0;
-    }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-    .nav-right { display: flex; align-items: center; }
-    .nav-brand { font-family: 'Gloock', serif; font-size: 1.2rem; color: var(--ink); letter-spacing: -0.01em; }
-    .nav-brand:hover { text-decoration: none; }
-    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
-    .nav-links a { font-size: 0.9rem; color: var(--muted); letter-spacing: 0.04em; }
-    .nav-links a:hover { color: var(--ink); text-decoration: none; }
-    .lang-toggle {
-      display: flex; gap: 0.4rem; align-items: center;
-      font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
-      border-left: 1px solid rgba(61,57,52,0.15); padding-left: 1.5rem; margin-left: 1.5rem;
-    }
-    .lang-toggle a { color: var(--muted); }
-    .lang-toggle a:hover { color: var(--ink); text-decoration: none; }
-    .lang-current { color: var(--ink); font-weight: 700; }
-    .lang-sep { color: rgba(61,57,52,0.22); user-select: none; }
-    main { flex: 1; padding: 5.5rem 0; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5.5rem; align-items: start; }
-    .contact-left h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.02em; margin-bottom: 1.75rem; }
-    .contact-left p { color: var(--muted); line-height: 1.78; max-width: 42ch; margin-bottom: 1.25rem; }
-    .note {
-      font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--pen-orange);
-      display: inline-block; transform: rotate(-2deg); transform-origin: left center; margin-top: 0.75rem; line-height: 1.35;
-    }
-    .contact-form { display: flex; flex-direction: column; gap: 2rem; }
-    .field { display: flex; flex-direction: column; gap: 0.4rem; }
-    label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mint); }
-    input, textarea, select {
-      font-family: 'Inclusive Sans', sans-serif; font-size: 1rem; background: transparent;
-      border: none; border-bottom: 1.5px solid rgba(61,57,52,0.25);
-      padding: 0.6rem 0; color: var(--ink); width: 100%; transition: border-color 0.2s;
-      border-radius: 0; outline: none; -webkit-appearance: none; appearance: none;
-    }
-    input:focus, textarea:focus, select:focus { border-bottom-color: var(--periwinkle-text); }
-    textarea { resize: vertical; min-height: 120px; line-height: 1.65; }
-    .select-wrap { position: relative; }
-    .select-wrap::after {
-      content: '↓'; font-family: 'Inclusive Sans', sans-serif;
-      position: absolute; right: 0; bottom: 0.6rem; color: var(--muted); pointer-events: none; font-size: 0.9rem;
-    }
-    ::placeholder { color: var(--muted); opacity: 0.55; }
-    button[type="submit"] {
-      display: inline-block; background: var(--ink); color: var(--bg);
-      font-family: 'Inclusive Sans', sans-serif; font-size: 0.9375rem;
-      padding: 0.875rem 2rem; border: none; border-radius: 2px;
-      cursor: pointer; align-self: flex-start; transition: background 0.18s; letter-spacing: 0.01em;
-    }
-    button[type="submit"]:hover { background: var(--periwinkle-text); }
-    footer { padding: 2rem 0; border-top: 1px solid rgba(92,88,117,0.18); }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-brand { font-family: 'Gloock', serif; color: var(--muted); font-size: 0.9rem; }
-    .footer-links { display: flex; gap: 1.75rem; list-style: none; }
-    .footer-links a { font-size: 0.875rem; color: var(--muted); }
-    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; } main { padding: 4rem 0; } }
-    @media (max-width: 480px) { .nav-links { display: none; } .lang-toggle { border-left: none; padding-left: 0; margin-left: 0; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
-</style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -164,7 +85,7 @@
       <div class="footer-inner">
         <span class="footer-brand">Anne James</span>
         <ul class="footer-links">
-          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://linkedin.com/in/annejames" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack</a></li>
           <li><a href="/pt/contact/">Contacto</a></li>
         </ul>
