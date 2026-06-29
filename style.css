@@ -11,6 +11,7 @@
       font-family: 'Inclusive Sans', sans-serif;
       font-size: 1.0625rem; line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      min-height: 100vh; display: flex; flex-direction: column;
     }
     h1, h2, h3 { font-family: 'Gloock', serif; font-weight: 400; line-height: 1.15; }
     h1 { font-size: clamp(2.6rem, 6vw, 5rem); letter-spacing: -0.02em; }
@@ -32,7 +33,9 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='0.9' fill='%235C5875' fill-opacity='0.13'/%3E%3C/svg%3E");
     }
     .container { width: min(92%, 1080px); margin: 0 auto; }
+    main { flex: 1; padding: 5.5rem 0; }
     section { padding: 5.5rem 0; }
+    #hero, #services, #about, #cta { flex: none; }
     nav {
       position: sticky; top: 0; z-index: 100;
       background-color: var(--bg); border-bottom: 1px solid rgba(92,88,117,0.18); padding: 1.1rem 0;
