@@ -82,6 +82,7 @@
       width: 120px; height: 120px; object-fit: cover; object-position: center top;
       border-radius: 50%; display: block; margin-bottom: 1.75rem; flex-shrink: 0;
     }
+    html[lang="es"] h1 { font-size: clamp(2.3rem, 5.5vw, 4.7rem); }
     .hero-h1 em { font-style: italic; color: var(--periwinkle); }
     .hero-note-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-top: -0.25rem; }
     .hero-sub { font-size: 1.125rem; color: var(--muted); max-width: 54ch; line-height: 1.75; }
