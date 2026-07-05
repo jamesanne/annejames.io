@@ -71,29 +71,17 @@
       background: var(--mint); flex-shrink: 0;
     }
     .hero-illustration-wrap {
-      position: relative; width: 100%; flex-shrink: 0;
+      position: relative; flex-shrink: 0; width: 100%;
+      align-self: center; overflow: hidden;
     }
     .hero-illustration {
       width: 100%; height: auto; display: block;
     }
-    .pipe-label {
-      position: absolute; font-family: 'Caveat', cursive;
-      font-size: 1.1rem; color: var(--pen-orange); font-weight: 600; line-height: 1;
-    }
-    .label-bofu   { top: 3%;  left: 5%;  transform: rotate(-2deg); font-size: 1.4rem; }
-    .label-icp    { top: 14%; left: 4%;  transform: rotate(-3deg); }
-    .label-time   { top: 27%; right: 3%; transform: rotate(2deg); }
-    .label-ghosted{ top: 63%; left: 4%;  transform: rotate(-2deg); }
-    .label-trust  { top: 55%; left: 40%; transform: rotate(1.5deg); font-size: 1rem; }
     .about-photo {
       width: 120px; height: 120px; object-fit: cover; object-position: center top;
       border-radius: 50%; display: block; margin-bottom: 1.75rem; flex-shrink: 0;
     }
     .hero-h1 em { font-style: italic; color: var(--periwinkle); }
-    .hero-h1 .h1-arrow {
-      font-family: 'Caveat', cursive; color: var(--pen-orange);
-      font-size: 0.65em; vertical-align: middle; font-style: normal;
-    }
     .hero-note-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-top: -0.25rem; }
     .hero-sub { font-size: 1.125rem; color: var(--muted); max-width: 54ch; line-height: 1.75; }
     .hero-actions { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; margin-top: 0.25rem; }
