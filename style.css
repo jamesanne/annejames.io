@@ -58,7 +58,7 @@
     .lang-sep { color: rgba(61,57,52,0.22); user-select: none; }
     #hero { min-height: 88vh; display: flex; align-items: center; padding: 6rem 0 5rem; }
     .hero-inner {
-      display: grid; grid-template-columns: 1fr 280px;
+      display: grid; grid-template-columns: 1fr 380px;
       gap: 4rem; align-items: center; width: 100%;
     }
     .hero-text { display: flex; flex-direction: column; gap: 1.5rem; max-width: 640px; }
