@@ -18,6 +18,7 @@
     h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); letter-spacing: -0.015em; }
     h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
     p { max-width: 62ch; }
+    p:empty { display: none; margin: 0; }
     a { color: var(--periwinkle-text); text-decoration: none; }
     a:hover { text-decoration: underline; }
     a:focus-visible { outline: 2px solid var(--periwinkle-text); outline-offset: 3px; border-radius: 2px; }
@@ -99,11 +100,13 @@
     }
     .btn-ghost:hover { color: var(--ink); border-color: var(--ink); text-decoration: none; }
     .section-head { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 3rem; }
+    #why { border-top: 1px solid rgba(92,88,117,0.18); }
+    .why-body { font-size: 1.0625rem; color: var(--muted); line-height: 1.78; max-width: 72ch; }
     .section-head h2 { color: var(--ink); }
     .section-rule { flex: 1; height: 1px; background: var(--mint); opacity: 0.45; }
     .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
     .card { padding: 2.25rem 2rem; background: rgba(136,146,216,0.055); border-top: 3px solid var(--mint); }
-    .card:nth-child(even) { border-top-color: var(--periwinkle); }
+    .card:nth-child(4) { border-top-color: var(--periwinkle); }
     .card h3 { margin-bottom: 0.875rem; color: var(--ink); }
     .card p { color: var(--muted); font-size: 0.9375rem; line-height: 1.72; max-width: none; }
     .card-note { margin-top: 1.25rem; display: block; }
