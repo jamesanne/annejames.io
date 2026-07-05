@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anne James | Revenue Architect</title>
-  <meta name="description" content="B2B SaaS marketing, by an anthropologist. The science of how buyers decide and the GTM build to reach them.">
+  <title>Contact | Anne James</title>
+  <meta name="description" content="Get in touch with Anne James, fractional B2B SaaS marketer and anthropologist.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Gloock&family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
@@ -18,116 +18,68 @@
         <a href="/" class="nav-brand">Anne James</a>
         <div class="nav-right">
           <ul class="nav-links">
-            <li><a href="#services">Work</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/#services">Work</a></li>
+            <li><a href="/#about">About</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
           <div class="lang-toggle">
           <span class="lang-current">EN</span><span class="lang-sep">·</span>
-          <a href="/pt/">PT</a><span class="lang-sep">·</span>
-          <a href="/es/">ES</a>
+          <a href="/pt/contact/">PT</a><span class="lang-sep">·</span>
+          <a href="/es/contact/">ES</a>
         </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <section id="hero" class="dot-grid">
+  <!-- PIXEL / TRACKING SCRIPTS GO HERE -->
+
+  <main>
     <div class="container">
-      <div class="hero-inner" style="grid-template-columns: 1fr 420px;">
-        <div class="hero-text">
-          <div class="eyebrow">Field observation&#8194;001</div>
-          <h1 class="hero-h1">The fastest path to pipeline? Help ICPs <em>decide</em>.</h1>
-          <div class="hero-note-row">
-            <span class="note">↑ & their AI assistants</span>
-          </div>
-          <p class="hero-sub">Your market is noisy and the buyer journey is now AI-first. But it's not enough to "be in the answer." If you want to build <span class="hl-p">(and not leak)</span> pipeline, your GTM should start where decisions get made at the bottom of the funnel.</p>
-          <div class="hero-actions">
-            <a href="#services" class="btn-primary">See my work ↓</a>
-            <a href="/contact/" class="btn-ghost">Get in touch →</a>
-          </div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h1>Let's talk about your buyers.</h1>
+          <p>I work with early-stage founders and VC portfolios. If something feels off with positioning, pipeline, or both. Tell me what you're dealing with.</p>
+          <p>I read every message and respond within a few days.</p>
+          <span class="note">no pitch decks required.</span>
         </div>
-        <div class="hero-illustration-wrap">
-          <img src="/hero-illustration.png" alt="BOFU pipeline illustration" class="hero-illustration">
-        </div>
+        <form class="contact-form" id="contact-form" data-lang="EN">
+          <input type="hidden" name="_language" value="EN">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <div class="field">
+            <label for="org">Company or fund</label>
+            <input type="text" id="org" name="org" autocomplete="organization" placeholder="Optional">
+          </div>
+          <div class="field">
+            <label for="type">What brings you here</label>
+            <div class="select-wrap">
+              <select id="type" name="type" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="positioning">Positioning or category design</option>
+                <option value="foundation">Commercial foundation / GTM build</option>
+                <option value="abm">ABM and buyer research</option>
+                <option value="fractional">Fractional or embedded engagement</option>
+                <option value="vc">VC portfolio support</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Tell me what's going on</label>
+            <textarea id="message" name="message" placeholder="Where are you in the journey? What's not working?" required></textarea>
+          </div>
+          <button type="submit">Send →</button>
+        </form>
       </div>
     </div>
-  </section>
-
-  <section id="why">
-    <div class="container">
-      <div class="eyebrow" style="margin-bottom:1.5rem;">Field observation&#8194;002</div>
-      <div class="section-head"><h2>Why pipelines leak</h2><div class="section-rule"></div></div>
-      <p class="why-body">Most go-to-market loads the top of the funnel. The problem is, deals die at the bottom. Maybe pricing doesn't match what the buyer expected, or the proposal can't get through procurement because no one mapped the internal politics or anticipated the DPIA scrutiny. At that stage, you don't win on features but on trust, earned by understanding your buyer's specific world. When a prospect walks away at proposal stage, they rarely come back. This is why I anticipate risks at the bottom of the funnel before I feed the top.</p>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="section-head"><h2>My work</h2><div class="section-rule"></div></div>
-      <div class="services-grid">
-        <div class="card">
-          <h3>Positioning &amp; Category Design</h3>
-          <p>Right now, LLMs are deciding your category and whether buyers should find you or your competitor. Weak positioning and poor GEO are hard to correct once they're set in AI answers.</p>
-          <span class="card-note note">get ahead of this. early.</span>
-        </div>
-        <div class="card">
-          <h3>Commercial Infrastructure</h3>
-          <p>Pipeline metrics from day one, not after the runway's half gone. I build and run the revenue tech stack (HubSpot, Salesforce, Clay, Apollo, marketing automation) so attribution is real.</p>
-        </div>
-        <div class="card">
-          <h3>ABM &amp; Buyer Research</h3>
-          <p>I find the right beachhead market, build the ABM motion to win it, and prove the unit economics before expanding. Disciplined with budget. The kind of GTM a VC board wants to see.</p>
-        </div>
-        <div class="card">
-          <h3>Fractional &amp; Embedded</h3>
-          <p>Portfolio marketer for VC funds. Short sprints to build infrastructure, and extended engagements when you need someone to roll up their sleeves and run marketing, not just advise on it.</p>
-          <span class="card-note note">min. 10 hrs/month. accountability matters.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="section-head"><h2>About</h2><div class="section-rule"></div></div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Over more than a decade in B2B marketing, I've led GTM at companies acquired by NVIDIA and Sitecore, launched two first-in-category products, helped EU scale-ups get a foothold in the US market, and extensively researched how technical audiences think and decide.</p>
-          <p>Founders hire me when they've realised marketing is a science, not a vibe. As a trained anthropologist, I treat market intelligence like fieldwork: form a hypothesis, test it, bring the evidence to the table. You deserve a partner who treats commercial strategy with this level of rigour.</p>
-          <p></p>
-          <div class="about-note-row"><span class="note">dual PT/US citizen, based in Lisbon.</span></div>
-        </div>
-        <div class="about-sidebar">
-          <img src="/annejames.jpg" alt="Anne James" class="about-photo">
-          <div class="about-sidebar-item">
-            <div class="sidebar-label">Education</div>
-            <div class="sidebar-value">Degrees from Boston University and University of Edinburgh</div>
-          </div>
-          <div class="about-sidebar-item">
-            <div class="sidebar-label">Notable engagements</div>
-            <div class="sidebar-value">Run:ai (acq. NVIDIA) · Sage Business Cloud<br>Boxever (acq. Sitecore) · AI Findr</div>
-          </div>
-          <div class="about-sidebar-item">
-            <div class="sidebar-label">Currently</div>
-            <div class="sidebar-value">Available for fractional &amp; embedded engagements. Lisbon-based. Working across Europe &amp; US.</div>
-          </div>
-          <div class="about-sidebar-item">
-            <div class="sidebar-label">Credentials</div>
-            <div class="sidebar-value">AIGP (Artificial Intelligence Governance Professional) certification (expected Aug 2026)</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="cta">
-    <div class="container">
-      <h2>Let's talk about your buyers.</h2>
-      <p>If you're an early-stage founder who wants a read on positioning or pipeline, or a VC looking for portfolio marketing support, I'd like to hear what you're working with.</p>
-      <a href="/contact/" class="btn-cta">Contact Anne →</a>
-    </div>
-  </section>
+  </main>
 
   <footer>
     <div class="container">
@@ -140,6 +92,40 @@
       </div>
     </div>
   </footer>
+
+<script>
+(function() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    var btn = form.querySelector('button[type="submit"]');
+    var orig = btn.textContent;
+    btn.textContent = '...';
+    btn.disabled = true;
+    fetch('https://formspree.io/f/xzdloknv', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(r) {
+      if (r.ok) {
+        window.location.href = 'https://annejames.io';
+      } else {
+        btn.textContent = orig;
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    })
+    .catch(function() {
+      btn.textContent = orig;
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
