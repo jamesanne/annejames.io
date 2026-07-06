@@ -95,16 +95,11 @@
     </div>
   </footer>
 
-
-
 <script>
-(function() {
-
-<script>
-if (window.location.search.includes('success=1')) {
-  var form = document.getElementById('contact-form');
-  if (form) form.innerHTML = '<p style="font-family: 'Caveat', cursive; font-size: 1.35rem; color: #C75B2A; transform: rotate(-1deg); display: inline-block; margin-top: 1rem;">Message sent.</p>';
-  history.replaceState(null, '', window.location.pathname);
+if (window.location.search.indexOf("success=1") !== -1) {
+  var f = document.getElementById("contact-form");
+  if (f) { f.innerHTML = '<p class="note" style="margin-top:1rem;">Message sent.</p>'; }
+  history.replaceState(null, "", window.location.pathname);
 }
 </script>
 
