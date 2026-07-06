@@ -43,7 +43,10 @@
           <p>Leio tudo e respondo em poucos dias.</p>
           <span class="note">sem decks. prometido.</span>
         </div>
-        <form class="contact-form" method="POST" action="https://formspree.io/f/xzdloknv">
+        <iframe name="hidden-iframe" style="display:none;"></iframe>
+        <form class="contact-form" id="contact-form" method="POST"
+          action="https://formspree.io/f/xzdloknv"
+          target="hidden-iframe">
           <input type="hidden" name="_language" value="PT">
           <div class="field">
             <label for="name">Nome</label>
@@ -94,6 +97,18 @@
   </footer>
 
 
+
+<script>
+(function() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function() {
+    setTimeout(function() {
+      form.innerHTML = '<p style="font-family: 'Caveat', cursive; font-size: 1.35rem; color: #C75B2A; transform: rotate(-1deg); display: inline-block;">Message sent.</p>';
+    }, 800);
+  });
+})();
+</script>
 
 </body>
 </html>
