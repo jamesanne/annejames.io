@@ -20,7 +20,7 @@
           <ul class="nav-links">
             <li><a href="#services">Work</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="mailto:annejjames@gmail.com">Contact</a></li>
           </ul>
           <div class="lang-toggle">
           <span class="lang-current">EN</span><span class="lang-sep">·</span>
@@ -44,7 +44,7 @@
           <p class="hero-sub">Your market is noisy and the buyer journey is now AI-first. But it's not enough to "be in the answer." If you want to build <span class="hl-p">(and not leak)</span> pipeline, your GTM should start where decisions get made at the bottom of the funnel.</p>
           <div class="hero-actions">
             <a href="#services" class="btn-primary">See my work ↓</a>
-            <a href="/contact/" class="btn-ghost">Get in touch →</a>
+            <a href="mailto:annejjames@gmail.com" class="btn-ghost">Get in touch →</a>
           </div>
         </div>
         <div class="hero-illustration-wrap">
@@ -125,7 +125,7 @@
     <div class="container">
       <h2>Let's talk about your buyers.</h2>
       <p>If you're an early-stage founder who wants a read on positioning or pipeline, or a VC looking for portfolio marketing support, I'd like to hear what you're working with.</p>
-      <a href="/contact/" class="btn-cta">Contact Anne →</a>
+      <a href="mailto:annejjames@gmail.com" class="btn-cta">Contact Anne →</a>
     </div>
   </section>
 
@@ -135,45 +135,13 @@
         <span class="footer-brand">Anne James</span>
         <ul class="footer-links">
           <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="mailto:annejjames@gmail.com">Contact</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-<script>
-(function() {
-  var form = document.getElementById('contact-form');
-  if (!form) return;
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var data = new FormData(form);
-    var btn = form.querySelector('button[type="submit"]');
-    var orig = btn.textContent;
-    btn.textContent = '...';
-    btn.disabled = true;
-    fetch('https://formspree.io/f/xzdloknv', {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function(r) {
-      if (r.ok) {
-        window.location.href = 'https://annejames.io';
-      } else {
-        btn.textContent = orig;
-        btn.disabled = false;
-        alert('Something went wrong. Please try again.');
-      }
-    })
-    .catch(function() {
-      btn.textContent = orig;
-      btn.disabled = false;
-      alert('Something went wrong. Please try again.');
-    });
-  });
-})();
-</script>
+
 
 </body>
 </html>
