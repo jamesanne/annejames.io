@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Gloock&family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
-<!-- v2 -->
 </head>
 <body>
 
@@ -44,11 +43,9 @@
           <p>Leo todo y respondo en pocos días.</p>
           <span class="note">sin decks. prometido.</span>
         </div>
-        <iframe name="hidden-iframe" style="display:none;"></iframe>
-        <form class="contact-form" id="contact-form" method="POST"
-          action="https://formspree.io/f/xzdloknv"
-          target="hidden-iframe">
+        <form class="contact-form" method="POST" action="https://formspree.io/f/xzdloknv">
           <input type="hidden" name="_language" value="ES">
+          <input type="hidden" name="_next" value="https://annejames.io/contact/?success=1">
           <div class="field">
             <label for="name">Nombre</label>
             <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre" required>
@@ -101,14 +98,13 @@
 
 <script>
 (function() {
+
+<script>
+if (window.location.search.includes('success=1')) {
   var form = document.getElementById('contact-form');
-  if (!form) return;
-  form.addEventListener('submit', function() {
-    setTimeout(function() {
-      form.innerHTML = '<p style="font-family: 'Caveat', cursive; font-size: 1.35rem; color: #C75B2A; transform: rotate(-1deg); display: inline-block;">Message sent.</p>';
-    }, 800);
-  });
-})();
+  if (form) form.innerHTML = '<p style="font-family: 'Caveat', cursive; font-size: 1.35rem; color: #C75B2A; transform: rotate(-1deg); display: inline-block; margin-top: 1rem;">Message sent.</p>';
+  history.replaceState(null, '', window.location.pathname);
+}
 </script>
 
 </body>
