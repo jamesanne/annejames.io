@@ -18,6 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.addEventListener('click', function (e) {
+    if (
+      nav.classList.contains('is-open') &&
+      !nav.contains(e.target) &&
+      !toggle.contains(e.target)
+    ) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && nav.classList.contains('is-open')) {
       nav.classList.remove('is-open');
