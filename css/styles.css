@@ -148,7 +148,6 @@ h3 { font-size: 1.1rem; }
 h4 { font-size: 0.95rem; }
 p { margin: 0 0 1.1em; max-width: 38rem; }
 p.lede { font-size: var(--step-1); color: var(--ink-soft); }
-.measure-wide p, .measure-wide { max-width: none; }
 strong { font-weight: 700; }
 
 /* ---------- Header / nav ---------- */
@@ -622,6 +621,8 @@ body:has(.main-nav.is-open)::before {
 .project-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
   background: var(--paper);
   display: flex; flex-direction: column;
 }
