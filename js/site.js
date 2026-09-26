@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Close the "Industries"/language dropdowns when clicking outside them.
-  document.querySelectorAll('.nav-drop, .lang-drop').forEach(function (drop) {
-    document.addEventListener('click', function (e) {
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('.nav-drop[open], .lang-drop[open]').forEach(function (drop) {
       if (!drop.contains(e.target)) drop.removeAttribute('open');
     });
   });
