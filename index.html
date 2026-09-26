@@ -19,128 +19,251 @@
         <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <div class="lang-drop-item">
+          <details class="lang-drop">
+            <summary aria-label="Language">
+              <span class="lang-chip">EN</span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <ul>
+          <li><a class="lang-chip" href="es/index.html" lang="es" hreflang="es">ES</a></li>
+          <li><a class="lang-chip" href="pt/index.html" lang="pt" hreflang="pt">PT</a></li>
+            </ul>
+          </details>
+        </div>
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
           <li class="nav-drop-item">
             <details class="nav-drop">
-              <summary>Industries
+              <summary>Services
                 <svg class="chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
               </summary>
               <ul>
+                <li class="nav-drop-label-item"><span class="nav-drop-label">By sector</span></li>
                 <li><a href="services-museums.html">Museums &amp; Culture</a></li>
                 <li><a href="services-tourism.html">Tourism &amp; Travel</a></li>
                 <li><a href="services-tech.html">Technology</a></li>
               </ul>
             </details>
           </li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="lang-switch" aria-label="Language">
-          <a href="index.html" aria-current="true" lang="en" hreflang="en">EN</a>
-          <a href="es/index.html" lang="es" hreflang="es">ES</a>
-          <a href="pt/index.html" lang="pt" hreflang="pt">PT</a>
-        </div>
-      </nav>
+          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Let's work together</a></li>
+        </ul>      </nav>
     </div>
   </header>
 
   <main id="main">
     <section>
       <div class="wrap hero">
-        <div>
-          <p class="hero__eyebrow">AI governance for culture, travel &amp; technology</p>
-          <h1>Good judgment about AI, built into how your organization actually works.</h1>
-          <p class="lede">I help museums, tourism brands, and technology companies put practical guardrails around AI — before a rushed rollout becomes a headline, a lawsuit, or a loss of public trust.</p>
-          <div class="stack" style="grid-auto-flow: column; justify-content: start; gap: 1rem;">
-            <a class="btn btn--primary" href="contact.html">Start a conversation</a>
-            <a class="btn btn--outline" href="about.html">About my approach</a>
-          </div>
-        </div>
-        <div class="hero__panel panel--lilac">
-          <h3 class="mt-0">Three sectors, one discipline</h3>
-          <p>Cultural heritage, travel &amp; hospitality, and applied AI companies each face different regulators, audiences, and risks. The governance work has to fit the sector — not the other way around.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section--blush">
-      <div class="wrap">
-        <h2>Who this is for</h2>
-        <div class="panel-grid panel-grid--3">
-          <div class="panel panel--outline">
-            <h3>Museums &amp; Cultural Institutions</h3>
-            <p>Collections metadata, visitor-facing chatbots, digitization projects, and donor data — handled in a way that protects the institution's credibility.</p>
-            <a href="services-museums.html">See the approach →</a>
-          </div>
-          <div class="panel panel--outline">
-            <h3>Tourism &amp; Travel Brands</h3>
-            <p>Personalization engines, dynamic pricing, and AI-written guest communications, governed so they build trust instead of eroding it.</p>
-            <a href="services-tourism.html">See the approach →</a>
-          </div>
-          <div class="panel panel--outline">
-            <h3>Technology Companies</h3>
-            <p>Model risk, vendor due diligence, and internal AI-use policy for teams shipping AI features under real deadline pressure.</p>
-            <a href="services-tech.html">See the approach →</a>
-          </div>
-        </div>
+        <h1>Good judgment about AI, built into how your organization actually works.</h1>
+        <p class="lede">I help museums, tourism brands, and technology companies put practical guardrails around AI — before a rushed rollout becomes a headline, a lawsuit, or a loss of public trust.</p>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <h2>How the work goes</h2>
-        <ol class="steps">
-          <li>
-            <span class="step-num" aria-hidden="true">1</span>
-            <div>
-              <h4>Assess</h4>
-              <p>A working audit of where AI already touches your organization — tools, vendors, and the decisions people are quietly making without a policy to guide them.</p>
+        <h2>Who this is for</h2>
+        <div class="accordion">
+          <details class="accordion-item" name="home-who-for" open>
+            <summary class="accordion-summary">
+              Museums &amp; Cultural Institutions
+              <svg class="accordion-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="accordion-body">
+              <div>
+                <p class="accordion-kicker">For museums &amp; cultural institutions</p>
+                <h4>Protect scholarly trust while collections go digital</h4>
+                <p>Collections metadata, visitor-facing chatbots, digitization projects, and donor data — handled in a way that protects the institution's credibility.</p>
+                <a href="services-museums.html">See the approach →</a>
+              </div>
+              <div class="accordion-media">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                <span class="sr-only">Space reserved for a photo</span>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">2</span>
-            <div>
-              <h4>Design</h4>
-              <p>A governance framework sized to your organization: clear roles, review thresholds, and documentation that people will actually use.</p>
+          </details>
+          <details class="accordion-item" name="home-who-for">
+            <summary class="accordion-summary">
+              Tourism &amp; Travel Brands
+              <svg class="accordion-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="accordion-body">
+              <div>
+                <p class="accordion-kicker">For tourism &amp; travel brands</p>
+                <h4>Build guest trust, not just guest data</h4>
+                <p>Personalization engines, dynamic pricing, and AI-written guest communications, governed so they build trust instead of eroding it.</p>
+                <a href="services-tourism.html">See the approach →</a>
+              </div>
+              <div class="accordion-media">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                <span class="sr-only">Space reserved for a photo</span>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">3</span>
-            <div>
-              <h4>Implement</h4>
-              <p>Policy written in plain language, staff training, and review workflows built into the tools your team already uses.</p>
+          </details>
+          <details class="accordion-item" name="home-who-for">
+            <summary class="accordion-summary">
+              Technology Companies
+              <svg class="accordion-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="accordion-body">
+              <div>
+                <p class="accordion-kicker">For technology companies</p>
+                <h4>Ship fast without shipping risk</h4>
+                <p>Model risk, vendor due diligence, and internal AI-use policy for teams shipping AI features under real deadline pressure.</p>
+                <a href="services-tech.html">See the approach →</a>
+              </div>
+              <div class="accordion-media">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                <span class="sr-only">Space reserved for a photo</span>
+              </div>
             </div>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">4</span>
-            <div>
-              <h4>Sustain</h4>
-              <p>Ongoing advisory as your tools, vendors, and the regulatory landscape change — so governance keeps pace instead of falling behind.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="wrap">
+        <div class="carousel-head">
+          <h2>From the blog</h2>
+        </div>
+      </div>
+      <div class="post-carousel-outer">
+        <button class="carousel-btn" type="button" data-carousel-dir="-1" aria-label="Previous post">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="post-carousel">
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
-          </li>
-        </ol>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Sep 18, 2026</span>
+              <span class="post-tags"><span class="tag">Museums</span><span class="tag">AI Policy</span></span>
+            </div>
+            <h3 class="post-card__title">What museums get wrong about AI-generated wall text</h3>
+            <p class="post-card__teaser">A quick checklist for catching confidently-wrong descriptions before a visitor does.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+            </div>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Sep 10, 2026</span>
+              <span class="post-tags"><span class="tag">Tourism</span><span class="tag">Pricing</span></span>
+            </div>
+            <h3 class="post-card__title">Dynamic pricing and the fairness question nobody's asking</h3>
+            <p class="post-card__teaser">Why algorithmic pricing needs an explanation, not just an optimization target.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+            </div>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Sep 2, 2026</span>
+              <span class="post-tags"><span class="tag">Technology</span><span class="tag">Policy</span></span>
+            </div>
+            <h3 class="post-card__title">A one-page AI policy template for five-person teams</h3>
+            <p class="post-card__teaser">You don't need a 40-page framework to start governing AI responsibly.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+            </div>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Aug 22, 2026</span>
+              <span class="post-tags"><span class="tag">Governance</span></span>
+            </div>
+            <h3 class="post-card__title">Why "move fast" and "ask permission later" don't mix with AI</h3>
+            <p class="post-card__teaser">The habits that work for shipping features can quietly become a liability.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+            </div>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Aug 14, 2026</span>
+              <span class="post-tags"><span class="tag">Museums</span><span class="tag">Community</span></span>
+            </div>
+            <h3 class="post-card__title">Reading the room: AI and community protocols in collections work</h3>
+            <p class="post-card__teaser">Existing agreements with source communities don't disappear just because a model is involved.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <div class="post-card__media" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+            </div>
+            <div class="post-card__body">
+            <div class="post-card__meta">
+              <span>Aug 5, 2026</span>
+              <span class="post-tags"><span class="tag">Technology</span><span class="tag">Security</span></span>
+            </div>
+            <h3 class="post-card__title">What an enterprise security review actually asks about your AI</h3>
+            <p class="post-card__teaser">The questions that come up again and again — and how to have answers ready.</p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-btn" type="button" data-carousel-dir="1" aria-label="Next post">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+      </div>
+      <div class="wrap">
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
     <section class="section--lilac">
       <div class="wrap">
-        <p class="statement">Governance isn't a brake on innovation. It's what lets you move fast without breaking public trust.</p>
+        <div class="newsletter">
+          <div>
+            <p class="newsletter__eyebrow">Newsletter</p>
+            <h2>AI governance news, without the hype</h2>
+            <p class="lede">An occasional email on what's actually changing in AI regulation and practice across museums, travel, and tech. No spam, unsubscribe anytime.</p>
+            <div class="newsletter__form">
+              <a class="btn btn--primary" href="https://yourpublication.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a>
+            </div>
+          </div>
+          <div class="newsletter__media" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+          </div>
+        </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap" style="display:grid; gap:2rem; grid-template-columns: 1fr;">
-        <div style="display:grid; gap:2rem; align-items:center;" class="about-teaser">
-          <div class="portrait" style="max-width: 220px;">
-            <img src="images/headshot-placeholder.svg" alt="Placeholder — add your headshot here" width="400" height="400">
-          </div>
-          <div>
-            <h2>Independent, and built that way on purpose</h2>
-            <p>I work as a solo advisor rather than through a large firm, which means the person who audits your AI use is the same person who sits with your team in the room. No handoffs, no junior staff learning on your account.</p>
-            <a class="btn btn--outline" href="about.html">More about my background</a>
-          </div>
+      <div class="wrap">
+        <h2>Latest Projects</h2>
+        <div class="project-grid">
+          <a class="project-card project-card--minimal" href="projects.html" style="text-decoration:none; color:inherit;">
+            <div class="project-card__image-wrap">
+              <div class="project-card__media" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+              </div>
+              <h3 class="project-card__title">Science Museum</h3>
+              <p class="project-card__subtitle">A pre-launch risk review for their first visitor chatbot</p>
+            </div>
+          </a>
+          <a class="project-card project-card--minimal" href="projects.html" style="text-decoration:none; color:inherit;">
+            <div class="project-card__image-wrap">
+              <div class="project-card__media" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+              </div>
+              <h3 class="project-card__title">Hotel Group</h3>
+              <p class="project-card__subtitle">A risk review before their AI concierge launched</p>
+            </div>
+          </a>
         </div>
+        <p style="margin-top: 1.5rem;"><a href="projects.html">See all projects →</a></p>
       </div>
     </section>
 
@@ -156,11 +279,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <h4>AI Governance Consulting</h4>
-        <p>Independent advisory for museums, tourism brands, and technology companies building responsible AI practices.</p>
-      </div>
-      <div>
-        <h4>Sectors</h4>
+        <h4>Site</h4>
         <ul>
           <li><a href="services-museums.html">Museums &amp; Culture</a></li>
           <li><a href="services-tourism.html">Tourism &amp; Travel</a></li>
@@ -168,15 +287,25 @@
         </ul>
       </div>
       <div>
-        <h4>Site</h4>
+        <h4 class="footer-grid__spacer" aria-hidden="true">&nbsp;</h4>
         <ul>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://yourpublication.substack.com" target="_blank" rel="noopener">Substack</a></li>
+          <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://bsky.app/profile/yourhandle" target="_blank" rel="noopener">Bluesky</a></li>
         </ul>
       </div>
     </div>
     <div class="wrap footer-bottom">
       <span>© 2026 AI Governance Consulting.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="cookies.html">Cookies Policy</a></span>
       <span>Built for low page weight — <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">carbon-conscious by design</a>.</span>
     </div>
   </footer>
