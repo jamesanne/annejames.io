@@ -167,6 +167,8 @@ strong { font-weight: 700; }
   color: var(--ink);
 }
 .nav-toggle {
+  position: relative;
+  z-index: 60;
   display: inline-flex; align-items: center; justify-content: center;
   width: 44px; height: 44px;
   border-radius: 5px;
@@ -180,6 +182,7 @@ strong { font-weight: 700; }
 
 .main-nav {
   position: fixed;
+  z-index: 50;
   inset: 0 0 0 auto;
   width: min(20rem, 86vw);
   background: var(--paper);
@@ -190,6 +193,12 @@ strong { font-weight: 700; }
   overflow-y: auto;
 }
 .main-nav.is-open { transform: translateX(0); }
+body:has(.main-nav.is-open)::before {
+  content: "";
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 48;
+}
 /* Scoped to DIRECT children only — a bare ".main-nav ul" etc. would also
    match the nested dropdown lists and blow up their layout. */
 .main-nav > ul { list-style: none; margin: 0; padding: 0; }
@@ -429,6 +438,12 @@ strong { font-weight: 700; }
   .accordion-body > div:first-child { padding-right: calc(30% + 2rem); }
   .accordion-media { width: 30%; }
 }
+@media (max-width: 30em) {
+  .accordion-summary { padding-right: clamp(1.25rem, 4vw, 2.25rem); }
+  .accordion-body { display: flex; flex-direction: column; }
+  .accordion-body > div:first-child { order: 2; padding-right: clamp(1.25rem, 4vw, 2.25rem); }
+  .accordion-media { order: 1; position: static; width: 100%; min-height: 12rem; }
+}
 
 /* ---------- Panels / cards (flat color, no drop shadows) ---------- */
 .panel-grid {
@@ -561,6 +576,13 @@ strong { font-weight: 700; }
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width: 30em) {
+  .post-card__body { padding: 1.1rem 1.25rem; }
+  .post-card__meta { font-size: 0.8rem; gap: 0.4rem; margin-bottom: 0.4rem; }
+  .tag { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
+  .post-card__title { font-size: 1.2rem; }
+  .post-card__teaser { font-size: 0.85rem; -webkit-line-clamp: 1; }
 }
 .carousel-dots {
   display: flex; gap: 0.5rem; justify-content: center;
