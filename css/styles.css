@@ -152,8 +152,7 @@ strong { font-weight: 700; }
 /* ---------- Header / nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 40;
-  background: rgba(255,254,252,0.92);
-  backdrop-filter: saturate(140%) blur(6px);
+  background: rgba(255,254,252,0.96);
 }
 .site-header .wrap {
   display: flex; align-items: center; justify-content: space-between;
