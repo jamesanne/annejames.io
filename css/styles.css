@@ -721,7 +721,9 @@ strong { font-weight: 700; }
 
 /* ---------- Bio page (About) ---------- */
 .bio {
-  display: grid; gap: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
   align-items: center;
 }
 .bio__media {
