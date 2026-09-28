@@ -127,3 +127,45 @@ document.addEventListener('DOMContentLoaded', function () {
     sync();
   });
 });
+
+
+// Tabs ("index cards"). Without JS every card is simply shown, stacked.
+document.querySelectorAll('[data-tabs]').forEach(function (root) {
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+  if (!tabs.length) return;
+
+  panels.forEach(function (p, i) {
+    p.setAttribute('role', 'tabpanel');
+    p.setAttribute('aria-labelledby', tabs[i].id);
+  });
+
+  function select(i, focus) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      panels[j].classList.toggle('is-active', on);
+    });
+    if (focus) tabs[i].focus();
+  }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i); });
+    t.addEventListener('keydown', function (e) {
+      var n = tabs.length, next = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = (i + 1) % n;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = (i - 1 + n) % n;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = n - 1;
+      if (next !== null) { e.preventDefault(); select(next, true); }
+    });
+  });
+
+  // Deep link: services-museums.html#skills opens that card
+  var hash = location.hash.slice(1), start = 0;
+  tabs.forEach(function (t, i) {
+    if (t.id === hash || t.getAttribute('aria-controls') === hash) start = i;
+  });
+  select(start);
+});
