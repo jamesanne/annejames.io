@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About — Anne James</title>
-  <meta name="description" content="Independent AI governance advisor working with museums and tourism brands.">
+  <title>Contact — Anne James</title>
+  <meta name="description" content="Get in touch to discuss AI governance for your museum or tourism brand.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -26,8 +26,8 @@
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <ul>
-          <li><a class="lang-chip" href="es/sobre-mi.html" lang="es" hreflang="es">ES</a></li>
-          <li><a class="lang-chip" href="pt/sobre.html" lang="pt" hreflang="pt">PT</a></li>
+          <li><a class="lang-chip" href="es/contacto.html" lang="es" hreflang="es">ES</a></li>
+          <li><a class="lang-chip" href="pt/contato.html" lang="pt" hreflang="pt">PT</a></li>
             </ul>
           </details>
         </div>
@@ -45,31 +45,58 @@
             </details>
           </li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Let's work together</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>      </nav>
     </div>
   </header>
 
   <main id="main">
     <section>
-      <div class="wrap bio">
-        <div class="bio__media">
-          <img src="images/headshot.webp" alt="Portrait of Anne James" width="1599" height="1600">
-        </div>
-        <div class="bio__content">
-          <h1>Anne James</h1>
-          <p class="lede">I work by embedding directly inside your organization for the length of an engagement, rather than parachuting in for a workshop and disappearing. That means sitting with your team, learning your systems and vendors, and seeing how decisions actually get made — not just writing a policy from the outside.</p>
-          <p>It also means that when I come back — six months later, a year, two years on — I'm not starting from zero. I already understand how your organization works, so every follow-up engagement moves faster and goes deeper than the last.</p>
-        </div>
+      <div class="wrap hero">
+        <h1>Tell me where things stand, and I'll tell you what a sensible next step looks like.</h1>
+        <p class="lede">A first conversation is free and unhurried. Whether you have a specific AI project in mind or just a nagging feeling that you should have a policy by now, that's a good place to start.</p>
       </div>
     </section>
 
-    <section class="section--lilac center">
-      <div class="wrap">
-        <h2>Let's talk about your organization</h2>
-        <p class="lede" style="margin-inline:auto;">If you're not sure whether you need a full governance framework or just a second opinion, that's a perfectly good reason to start the conversation.</p>
-        <a class="btn btn--primary" href="contact.html">Get in touch</a>
+    <section class="section--blush">
+      <div class="wrap" style="display:grid; gap:2.5rem; grid-template-columns: 1fr;">
+        <form class="stack" action="#" method="post">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="org">Organization</label>
+            <input type="text" id="org" name="org" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="hint">I'll only use this to reply to you.</p>
+          </div>
+          <div class="field">
+            <label for="sector">Sector</label>
+            <select id="sector" name="sector">
+              <option value="">Select one</option>
+              <option value="museums">Museum / cultural institution</option>
+              <option value="tourism">Tourism / travel</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">What's on your mind?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="justify-self: start;">Send message</button>
+          <p class="hint">This form needs to be connected to your email or a form service (like Formspree or Netlify Forms) once the site is live — see the note in the project README.</p>
+        </form>
+
+        <div class="panel panel--lilac">
+          <h3 class="mt-0">Prefer email?</h3>
+          <p>Write directly to <a href="mailto:hello@example.com">hello@example.com</a> — replace this with your real address before publishing.</p>
+          <p style="margin-bottom:0;">Based in [your city]. Working with organizations across [your region / worldwide].</p>
+        </div>
       </div>
     </section>
   </main>
