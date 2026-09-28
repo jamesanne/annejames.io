@@ -16,6 +16,7 @@
   --panel: #e6e7ea;     /* cool gray: open accordion, panels, CTA bands, alternating cards */
   --plum: #632c59;      /* the one bold color — CTA/newsletter fills and the nav button */
   --accent: #d6d8dc;    /* button-sized only (carousel arrow hover) */
+  --tag-hover: #84b1fc;  /* tags that are links darken slightly on hover */
   --tag: #93bafc;       /* soft cornflower blue — small labels only: blog tags, service-card chips */
   --gray-pale: #f2f2f2; /* neutral pale gray — the repeating soft-panel slot */
   --ink: #212121;            /* primary text — neutral near-black, no warm tint */
@@ -506,7 +507,9 @@ strong { font-weight: 700; }
 /* ---------- Blog post carousel (horizontal scroll, full-bleed) ---------- */
 .carousel-head {
   margin-bottom: 1.5rem;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
 }
+.carousel-head a { font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
 .carousel-head h2 { margin-bottom: 0; }
 
 .post-carousel-outer {
@@ -543,6 +546,7 @@ strong { font-weight: 700; }
 .carousel-btn:disabled:hover { background: var(--ink); }
 
 .post-card {
+  position: relative;
   flex: 0 0 auto;
   width: min(84vw, 26rem);
   aspect-ratio: 20 / 21;
@@ -878,6 +882,105 @@ html:not(.js) .svc-panel + .svc-panel { margin-top: 2rem; }
   .svc-tab[aria-selected="true"] { background: var(--panel); border-color: var(--panel); color: var(--ink); }
   .js .svc-card { border-top-left-radius: 0; }
 }
+
+/* ---------- Case studies + blog ---------- */
+.crumb { margin: 0 0 1.5rem; max-width: none; font-size: 0.95rem; }
+.crumb a { color: var(--ink-soft); text-decoration: none; }
+.crumb a:hover, .crumb a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* tags that are links */
+a.tag { text-decoration: none; position: relative; z-index: 1; }
+a.tag:hover, a.tag:focus-visible { background: var(--tag-hover); }
+
+/* whole blog card is clickable via its title link; tags stay separate links above it */
+.post-card__title a { color: inherit; text-decoration: none; }
+.post-card__title a::after { content: ""; position: absolute; inset: 0; }
+.post-card:hover .post-card__title a { text-decoration: underline; text-underline-offset: 4px; }
+.post-card:has(.post-card__title a:focus-visible) { outline: 3px solid var(--ink); outline-offset: 3px; }
+.post-card[hidden] { display: none; }
+
+/* blog index grid */
+.post-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 42em) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64em) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
+.post-grid .post-card { width: auto; aspect-ratio: auto; }
+.post-grid .post-card__media { flex: 0 0 auto; aspect-ratio: 16 / 9; }
+.post-grid .post-card__body { overflow: visible; padding: 1.35rem 1.5rem 1.6rem; }
+.post-grid .post-card__meta { font-size: 0.95rem; gap: 0.6rem; }
+.post-grid .tag { font-size: 0.9rem; padding: 0.25rem 0.65rem; }
+.post-grid .post-card__title { display: block; -webkit-line-clamp: unset; overflow: visible; font-size: 1.5rem; }
+.post-grid .post-card__teaser { display: block; -webkit-line-clamp: unset; overflow: visible; font-size: 1.02rem; }
+
+/* tag filter (needs JS; without it every post is simply listed) */
+.tag-filter { display: none; }
+.js .tag-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1rem; }
+.tag-filter button {
+  font: inherit; font-weight: 500; font-size: 0.95rem; line-height: 1.3;
+  padding: 0.45rem 0.9rem; cursor: pointer;
+  border: 1px solid var(--ink-soft); border-radius: 5px;
+  background: transparent; color: var(--ink);
+}
+.tag-filter button:hover { background: var(--panel); }
+.tag-filter button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.tag-filter .count { margin-left: 0.35rem; color: var(--ink-soft); }
+.tag-filter button[aria-pressed="true"] .count { color: #d9d9d9; }
+.filter-status { min-height: 1.7em; margin: 0 0 1.5rem; color: var(--ink-soft); max-width: none; }
+
+/* long-form reading: blog posts and case-study stories */
+.prose { max-width: 44rem; }
+.prose p { max-width: none; }
+.prose h2 { font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.3rem); margin: 2.2em 0 0.5em; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { margin: 2em 0 0.5em; }
+.prose ul, .prose ol { padding-left: 1.4rem; margin: 0 0 1.3em; }
+.prose li { margin-bottom: 0.55em; }
+.prose a { text-decoration: underline; text-underline-offset: 3px; }
+.prose blockquote {
+  margin: 2.2rem 0; padding: 0.25rem 0 0.25rem 1.5rem;
+  border-left: 4px solid var(--plum);
+  font-family: var(--font-display); font-weight: 600;
+  font-size: var(--step-1); line-height: 1.35;
+}
+.prose blockquote p { margin: 0; }
+.prose blockquote footer { margin-top: 0.75rem; font-family: var(--font-body); font-weight: 400; font-size: 0.95rem; color: var(--ink-soft); }
+.prose figure { margin: 2.2rem 0; }
+.prose figcaption { margin-top: 0.6rem; font-size: 0.95rem; color: var(--ink-soft); }
+.callout { background: var(--panel); border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin: 2.2rem 0; }
+.callout h4 { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+
+.cover {
+  aspect-ratio: 16 / 9; border-radius: var(--radius-lg);
+  background: var(--panel);
+  display: flex; align-items: center; justify-content: center;
+}
+.cover svg { width: 2.75rem; height: 2.75rem; opacity: 0.55; }
+@media (min-width: 52em) { .cover--wide { aspect-ratio: 21 / 9; } }
+
+/* blog post page */
+.post-head { padding-top: clamp(2rem, 6vw, 4.5rem); }
+.post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; margin: 0 0 1.25rem; max-width: none; color: var(--ink-soft); }
+.post-title { font-size: clamp(2.3rem, 1.5rem + 3.4vw, 4.4rem); line-height: 1.05; letter-spacing: -0.02em; max-width: 22ch; margin-bottom: 1rem; }
+.byline { display: flex; align-items: center; gap: 1rem; max-width: 44rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.byline img { width: 4rem; height: 4rem; border-radius: 12px; object-fit: cover; flex: none; }
+.byline p { margin: 0; max-width: none; }
+.byline__name { font-weight: 500; }
+
+/* case study page */
+.hero.hero--compact, .hero.hero--tight { padding-block: clamp(2.5rem, 5vw, 4.5rem) 2rem; }
+.post-meta .tag, .hero .post-tags .tag { font-size: 0.9rem; padding: 0.25rem 0.65rem; }
+.hero.hero--compact h1 { font-size: clamp(2.6rem, 1.6rem + 5vw, 7rem); line-height: 1.02; letter-spacing: -0.02em; }
+.cs-layout { display: grid; gap: 2.5rem; }
+.cs-facts .svc-facts { grid-template-columns: 1fr; margin: 0; gap: 1.25rem; }
+.cs-offer { margin-top: 2rem; padding: 1.25rem 1.4rem; background: var(--panel); border-radius: var(--radius-md); }
+.cs-offer p { margin: 0 0 0.4rem; font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); }
+.cs-offer a { font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 52em) {
+  .cs-layout { grid-template-columns: minmax(15rem, 0.65fr) minmax(0, 1.6fr); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+  .cs-facts { position: sticky; top: 6.5rem; }
+}
+a.project-card:hover .project-card__title,
+a.project-card:focus-visible .project-card__title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
 
 /* ---------- Forms ---------- */
 .field { margin-bottom: 1.4rem; }
