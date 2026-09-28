@@ -169,3 +169,49 @@ document.querySelectorAll('[data-tabs]').forEach(function (root) {
   });
   select(start);
 });
+
+
+// Blog: filter posts by tag. Shareable via ?tag=slug. Without JS every post is listed.
+document.querySelectorAll('[data-filter-root]').forEach(function (root) {
+  var buttons = Array.prototype.slice.call(root.querySelectorAll('.tag-filter [data-tag]'));
+  var cards = Array.prototype.slice.call(root.querySelectorAll('[data-tags]'));
+  var status = root.querySelector('[data-filter-status]');
+  var known = buttons.map(function (b) { return b.getAttribute('data-tag'); });
+
+  function apply(tag, updateUrl) {
+    if (known.indexOf(tag) === -1) tag = 'all';
+    var shown = 0, label = '';
+    cards.forEach(function (c) {
+      var on = tag === 'all' || (' ' + c.getAttribute('data-tags') + ' ').indexOf(' ' + tag + ' ') > -1;
+      c.hidden = !on;
+      if (on) shown++;
+    });
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-tag') === tag;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) label = b.getAttribute('data-label') || '';
+    });
+    if (status) {
+      status.textContent = tag === 'all'
+        ? 'Showing all ' + shown + ' posts'
+        : 'Showing ' + shown + (shown === 1 ? ' post' : ' posts') + ' tagged ' + label;
+    }
+    if (updateUrl && window.history && history.replaceState) {
+      // best effort: some sandboxed or file:// contexts refuse to change the address bar
+      try { history.replaceState(null, '', tag === 'all' ? location.pathname : '?tag=' + encodeURIComponent(tag)); } catch (e) {}
+    }
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-tag'), true); });
+  });
+  // tags on the cards filter in place instead of reloading
+  root.querySelectorAll('a.tag[href^="?tag="]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      apply(decodeURIComponent(a.getAttribute('href').slice(5)), true);
+    });
+  });
+  var m = /[?&]tag=([^&]+)/.exec(location.search);
+  apply(m ? decodeURIComponent(m[1]) : 'all', false);
+});
