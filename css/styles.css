@@ -487,6 +487,15 @@ strong { font-weight: 700; }
 .panel--teal { background: var(--panel); color: var(--ink); }
 .panel--outline { border: 1px solid var(--line); }
 .panel h3 { font-size: var(--step-1); }
+.panel-icon { width: 2rem; height: 2rem; color: var(--ink); margin-bottom: 1rem; }
+.panel h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: var(--step-1);
+  margin-top: 0.6rem;
+}
 .panel p:last-child { margin-bottom: 0; }
 
 /* ---------- Numbered process (genuine sequence only) ---------- */
