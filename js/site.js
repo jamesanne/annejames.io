@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
           dot.setAttribute('aria-current', i === idx ? 'true' : 'false');
         });
       }
+      // Hide arrows and dots when every card already fits (nothing to scroll).
+      var fits = track.scrollWidth <= track.clientWidth + 4;
+      [prevBtn, nextBtn, dotsHost].forEach(function (el) { if (el) el.hidden = fits; });
       if (prevBtn) prevBtn.disabled = track.scrollLeft <= 4;
       if (nextBtn) nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
     }
@@ -124,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
       cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
     });
 
+    window.addEventListener('resize', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(sync, 120);
+    });
     sync();
   });
 });
