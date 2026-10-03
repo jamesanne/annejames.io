@@ -75,15 +75,18 @@
 
     <section style="padding-top: 0;">
       <div class="wrap" data-filter-root>
-        <!-- Tag filter hidden until there are ~6 real posts: delete the "hidden" attribute below to show it. Tag links on cards still filter.
+        <!-- Tag filter bar (to hide it again, add the "hidden" attribute to the div below; tag links on cards still filter).
              Only tags with posts have buttons. When a post uses a new tag, add its button (and update every count):
-             tourism-travel "Tourism &amp; Travel", visitor-trust "Visitor trust", collections-communities "Collections &amp; communities". -->
-        <div class="tag-filter" role="group" aria-label="Filter posts by tag" hidden>
-          <button type="button" data-tag="all" data-label="All" aria-pressed="true">All<span class="count">5</span></button>
-          <button type="button" data-tag="museums-culture" data-label="Museums &amp; Culture" aria-pressed="false">Museums &amp; Culture<span class="count">5</span></button>
+             tourism-travel "Tourism &amp; Travel", collections-communities "Collections &amp; communities".
+             Sector buttons are left out until there's a second sector: with the first Tourism &amp; Travel post, add both buttons back:
+             <button type="button" data-tag="museums-culture" data-label="Museums &amp; Culture" aria-pressed="false">Museums &amp; Culture<span class="count">N</span></button>
+             <button type="button" data-tag="tourism-travel" data-label="Tourism &amp; Travel" aria-pressed="false">Tourism &amp; Travel<span class="count">N</span></button> -->
+        <div class="tag-filter" role="group" aria-label="Filter posts by tag">
+          <button type="button" data-tag="all" data-label="All" aria-pressed="true">All<span class="count">6</span></button>
           <button type="button" data-tag="vendors-contracts" data-label="Vendors &amp; contracts" aria-pressed="false">Vendors &amp; contracts<span class="count">2</span></button>
           <button type="button" data-tag="regulation" data-label="Regulation" aria-pressed="false">Regulation<span class="count">4</span></button>
-          <button type="button" data-tag="policy-leadership" data-label="Policy &amp; leadership" aria-pressed="false">Policy &amp; leadership<span class="count">2</span></button>
+          <button type="button" data-tag="policy-leadership" data-label="Policy &amp; leadership" aria-pressed="false">Policy &amp; leadership<span class="count">3</span></button>
+          <button type="button" data-tag="visitor-trust" data-label="Visitor trust" aria-pressed="false">Visitor trust<span class="count">1</span></button>
         </div>
         <p class="filter-status" data-filter-status role="status" aria-live="polite"></p>
 
@@ -151,6 +154,19 @@
               </div>
               <h2 class="post-card__title"><a href="built-to-launch-not-to-last.html">Museums keep doing this. Funders keep paying for it. Nobody learns.</a></h2>
               <p class="post-card__teaser">In the cultural sector, arts funders and AI policy frameworks guarantee the failures they claim to prevent.</p>
+            </div>
+          </article>
+          <article class="post-card" data-tags="museums-culture visitor-trust policy-leadership">
+            <div class="post-card__media" aria-hidden="true">
+              <img src="../images/blog/compliant-not-legitimate-800.webp" srcset="../images/blog/compliant-not-legitimate-800.webp 800w, ../images/blog/compliant-not-legitimate-1200.webp 1200w, ../images/blog/compliant-not-legitimate-2400.webp 2400w" sizes="(min-width: 60em) 28vw, 84vw" alt="" width="800" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="post-card__body">
+              <div class="post-card__meta">
+                <time datetime="2026-02-16">Feb 16, 2026</time>
+                <span class="post-tags"><a class="tag" href="?tag=museums-culture">Museums &amp; Culture</a><a class="tag" href="?tag=visitor-trust">Visitor trust</a><a class="tag" href="?tag=policy-leadership">Policy &amp; leadership</a></span>
+              </div>
+              <h2 class="post-card__title"><a href="arts-institutions-as-ai-governance.html">Your AI is “compliant.” Your visitors don’t care. What museums teach about legitimacy.</a></h2>
+              <p class="post-card__teaser">Why technical compliance means nothing when you govern by trust.</p>
             </div>
           </article>
         </div>
