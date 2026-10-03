@@ -12,19 +12,20 @@
 :root {
   /* Color — near-white base, neutral (K-only) text, ONE bold color (plum) */
   --paper: #ffffff;
-  --bg: #fafafa;        /* page background — a whisper off white, neutral */
-  --panel: #e6e7ea;     /* cool gray: open accordion, panels, CTA bands, alternating cards */
-  --plum: #632c59;      /* the one bold color — CTA/newsletter fills and the nav button */
+  --bg: #fbf9f8;        /* page background — a whisper off white, faintly warm (was neutral #fafafa) */
+  --panel: #eee7ec;     /* plum-tinted pale (≈12% plum on white; was cool gray #e6e7ea): open accordion, panels, CTA bands, alternating cards */
+  --plum: #632c59;      /* the main bold color — CTA/newsletter fills, nav button, article headings & links */
+  --spark: #f05a28;     /* vermilion 'shock' accent — small marks only (rules, bars, bullets), never text: 3.2:1 on --bg */
   --accent: #d6d8dc;    /* button-sized only (carousel arrow hover) */
   --tag-hover: #84b1fc;  /* tags that are links darken slightly on hover */
   --tag: #93bafc;       /* soft cornflower blue — small labels only: blog tags, service-card chips */
   --gray-pale: #f2f2f2; /* neutral pale gray — the repeating soft-panel slot */
-  --ink: #212121;            /* primary text — neutral near-black, no warm tint */
+  --ink: #241f23;            /* primary text — near-black with a faint plum warmth (was neutral #212121) */
   --ink-soft: #5f5f5f;       /* secondary text — neutral gray */
   --footer-bg: #212121;      /* = var(--ink); named separately for clarity */
   --footer-text: #f2f2f2;
   --footer-text-soft: #b3b3b3;
-  --line: #e0e0e0;
+  --line: #e6dee3;     /* hairlines, faintly plum (was #e0e0e0) */
 
   /* Type */
   --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
@@ -1102,3 +1103,20 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--ink); outli
 .post-head,
 .post-body { padding-inline: max(var(--gutter), calc((100% - var(--measure)) / 2)); }
 .post-cover { padding-inline: max(var(--gutter), calc((100% - var(--measure-wide)) / 2)); }
+
+/* ---------- Article colour: let the plum do some work ----------
+   Long posts were almost entirely gray. Plum (already the brand colour)
+   now carries links, callout labels and table rules inside articles. */
+.prose a { color: var(--plum); text-decoration-color: rgba(99, 44, 89, 0.45); }
+.prose a:hover, .prose a:focus-visible { text-decoration-color: currentColor; }
+.prose h2, .prose .callout h3 { color: var(--plum); }
+.prose blockquote { color: var(--plum); }
+.data-table thead th { border-bottom-color: var(--plum); }
+.byline a { color: var(--plum); }
+
+/* ---------- Spark accent in articles ----------
+   Vermilion marks that repeat down a long post. Decorative only, never
+   used for text (fails contrast for words). Plum stays the action colour. */
+.prose h2::before { content: ""; display: block; width: 2.5rem; height: 4px; margin-bottom: 0.9rem; border-radius: 2px; background: var(--spark); }
+.prose blockquote { border-left-color: var(--spark); }
+.prose ul > li::marker { color: var(--spark); }
