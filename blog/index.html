@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Blog — Anne James</title>
   <meta name="description" content="Practical, plain-language writing on AI governance for museums, cultural institutions and travel brands.">
+  <link rel="canonical" href="https://annejames.io/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Anne James">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://annejames.io/blog/">
+  <meta property="og:title" content="Blog — Anne James">
+  <meta property="og:description" content="Practical, plain-language writing on AI governance for museums, cultural institutions and travel brands.">
+  <meta property="og:image" content="https://annejames.io/images/share-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portrait of Anne James">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="data:,">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="../css/styles.css">
@@ -63,97 +75,96 @@
 
     <section style="padding-top: 0;">
       <div class="wrap" data-filter-root>
-        <div class="tag-filter" role="group" aria-label="Filter posts by tag">
+        <!-- Tag filter hidden until there are ~6 real posts: delete the "hidden" attribute below to show it. Tag links on cards still filter. -->
+        <div class="tag-filter" role="group" aria-label="Filter posts by tag" hidden>
           <button type="button" data-tag="all" data-label="All" aria-pressed="true">All<span class="count">6</span></button>
-          <button type="button" data-tag="ai-policy" data-label="AI Policy" aria-pressed="false">AI Policy<span class="count">1</span></button>
-          <button type="button" data-tag="community" data-label="Community" aria-pressed="false">Community<span class="count">1</span></button>
-          <button type="button" data-tag="governance" data-label="Governance" aria-pressed="false">Governance<span class="count">1</span></button>
-          <button type="button" data-tag="museums" data-label="Museums" aria-pressed="false">Museums<span class="count">2</span></button>
-          <button type="button" data-tag="policy" data-label="Policy" aria-pressed="false">Policy<span class="count">1</span></button>
-          <button type="button" data-tag="pricing" data-label="Pricing" aria-pressed="false">Pricing<span class="count">1</span></button>
-          <button type="button" data-tag="security" data-label="Security" aria-pressed="false">Security<span class="count">1</span></button>
-          <button type="button" data-tag="technology" data-label="Technology" aria-pressed="false">Technology<span class="count">2</span></button>
-          <button type="button" data-tag="tourism" data-label="Tourism" aria-pressed="false">Tourism<span class="count">1</span></button>
+          <button type="button" data-tag="museums-culture" data-label="Museums &amp; Culture" aria-pressed="false">Museums &amp; Culture<span class="count">3</span></button>
+          <button type="button" data-tag="tourism-travel" data-label="Tourism &amp; Travel" aria-pressed="false">Tourism &amp; Travel<span class="count">1</span></button>
+          <button type="button" data-tag="vendors-contracts" data-label="Vendors &amp; contracts" aria-pressed="false">Vendors &amp; contracts<span class="count">2</span></button>
+          <button type="button" data-tag="regulation" data-label="Regulation" aria-pressed="false">Regulation<span class="count">1</span></button>
+          <button type="button" data-tag="visitor-trust" data-label="Visitor trust" aria-pressed="false">Visitor trust<span class="count">1</span></button>
+          <button type="button" data-tag="collections-communities" data-label="Collections &amp; communities" aria-pressed="false">Collections &amp; communities<span class="count">1</span></button>
+          <button type="button" data-tag="policy-leadership" data-label="Policy &amp; leadership" aria-pressed="false">Policy &amp; leadership<span class="count">2</span></button>
         </div>
         <p class="filter-status" data-filter-status role="status" aria-live="polite"></p>
 
         <div class="post-grid">
-          <article class="post-card" data-tags="museums ai-policy">
+          <article class="post-card" data-tags="museums-culture visitor-trust">
             <div class="post-card__media" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
             <div class="post-card__body">
               <div class="post-card__meta">
                 <time datetime="2026-09-18">Sep 18, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=museums">Museums</a><a class="tag" href="?tag=ai-policy">AI Policy</a></span>
+                <span class="post-tags"><a class="tag" href="?tag=museums-culture">Museums &amp; Culture</a><a class="tag" href="?tag=visitor-trust">Visitor trust</a></span>
               </div>
               <h2 class="post-card__title"><a href="ai-generated-wall-text.html">What museums get wrong about AI-generated wall text</a></h2>
               <p class="post-card__teaser">A quick checklist for catching confidently-wrong descriptions before a visitor does.</p>
             </div>
           </article>
-          <article class="post-card" data-tags="tourism pricing">
-            <div class="post-card__media" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-            </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <time datetime="2026-09-10">Sep 10, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=tourism">Tourism</a><a class="tag" href="?tag=pricing">Pricing</a></span>
-              </div>
-              <h2 class="post-card__title"><a href="dynamic-pricing-fairness.html">Dynamic pricing and the fairness question nobody's asking</a></h2>
-              <p class="post-card__teaser">Why algorithmic pricing needs an explanation, not just an optimization target.</p>
-            </div>
-          </article>
-          <article class="post-card" data-tags="technology policy">
+          <article class="post-card" data-tags="tourism-travel policy-leadership">
             <div class="post-card__media" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
             <div class="post-card__body">
               <div class="post-card__meta">
                 <time datetime="2026-09-02">Sep 2, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=technology">Technology</a><a class="tag" href="?tag=policy">Policy</a></span>
+                <span class="post-tags"><a class="tag" href="?tag=tourism-travel">Tourism &amp; Travel</a><a class="tag" href="?tag=policy-leadership">Policy &amp; leadership</a></span>
               </div>
               <h2 class="post-card__title"><a href="one-page-ai-policy.html">A one-page AI policy template for five-person teams</a></h2>
               <p class="post-card__teaser">You don't need a 40-page framework to start governing AI responsibly.</p>
             </div>
           </article>
-          <article class="post-card" data-tags="governance">
+          <article class="post-card" data-tags="policy-leadership">
             <div class="post-card__media" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
             <div class="post-card__body">
               <div class="post-card__meta">
                 <time datetime="2026-08-22">Aug 22, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=governance">Governance</a></span>
+                <span class="post-tags"><a class="tag" href="?tag=policy-leadership">Policy &amp; leadership</a></span>
               </div>
               <h2 class="post-card__title"><a href="move-fast-ask-permission.html">Why "move fast" and "ask permission later" don't mix with AI</a></h2>
               <p class="post-card__teaser">The habits that work for shipping features can quietly become a liability.</p>
             </div>
           </article>
-          <article class="post-card" data-tags="museums community">
+          <article class="post-card" data-tags="museums-culture collections-communities">
             <div class="post-card__media" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
             <div class="post-card__body">
               <div class="post-card__meta">
                 <time datetime="2026-08-14">Aug 14, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=museums">Museums</a><a class="tag" href="?tag=community">Community</a></span>
+                <span class="post-tags"><a class="tag" href="?tag=museums-culture">Museums &amp; Culture</a><a class="tag" href="?tag=collections-communities">Collections &amp; communities</a></span>
               </div>
               <h2 class="post-card__title"><a href="community-protocols-collections.html">Reading the room: AI and community protocols in collections work</a></h2>
               <p class="post-card__teaser">Existing agreements with source communities don't disappear just because a model is involved.</p>
             </div>
           </article>
-          <article class="post-card" data-tags="technology security">
+          <article class="post-card" data-tags="vendors-contracts">
             <div class="post-card__media" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
             </div>
             <div class="post-card__body">
               <div class="post-card__meta">
                 <time datetime="2026-08-05">Aug 5, 2026</time>
-                <span class="post-tags"><a class="tag" href="?tag=technology">Technology</a><a class="tag" href="?tag=security">Security</a></span>
+                <span class="post-tags"><a class="tag" href="?tag=vendors-contracts">Vendors &amp; contracts</a></span>
               </div>
               <h2 class="post-card__title"><a href="enterprise-security-review.html">What an enterprise security review actually asks about your AI</a></h2>
               <p class="post-card__teaser">The questions that come up again and again — and how to have answers ready.</p>
+            </div>
+          </article>
+          <article class="post-card" data-tags="museums-culture vendors-contracts regulation">
+            <div class="post-card__media" aria-hidden="true">
+              <img src="../images/blog/three-contract-fights-800.webp" srcset="../images/blog/three-contract-fights-800.webp 800w, ../images/blog/three-contract-fights-1200.webp 1200w, ../images/blog/three-contract-fights-2400.webp 2400w" sizes="(min-width: 60em) 28vw, 84vw" alt="" width="800" height="450" loading="lazy" decoding="async">
+            </div>
+            <div class="post-card__body">
+              <div class="post-card__meta">
+                <time datetime="2026-06-02">Jun 2, 2026</time>
+                <span class="post-tags"><a class="tag" href="?tag=museums-culture">Museums &amp; Culture</a><a class="tag" href="?tag=vendors-contracts">Vendors &amp; contracts</a><a class="tag" href="?tag=regulation">Regulation</a></span>
+              </div>
+              <h2 class="post-card__title"><a href="three-contract-fights.html">Three contract fights your AI vendor hopes you won’t pick</a></h2>
+              <p class="post-card__teaser">What museum Directors, Legal Counsel &amp; Collections Leaders need in their vendor agreements and how to brief your solicitor.</p>
             </div>
           </article>
         </div>
@@ -165,10 +176,10 @@
         <div class="newsletter">
           <div>
             <p class="newsletter__eyebrow">Newsletter</p>
-            <h2>AI governance news, without the hype</h2>
-            <p class="lede">An occasional email on what's actually changing in AI regulation and practice across museums, travel, and tech. No spam, unsubscribe anytime.</p>
+            <h2>If you can't use it, I don't send it.</h2>
+            <p class="lede">When I come across a really sticky challenge in museums and tourism, I publish a practical guide to help you think through it.</p>
             <div class="newsletter__form">
-              <a class="btn btn--primary" href="https://yourpublication.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a>
+              <a class="btn btn--primary" href="https://jamesanne.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a>
             </div>
           </div>
           <div class="newsletter__media" aria-hidden="true">
@@ -201,9 +212,8 @@
       <div>
         <h4>Connect</h4>
         <ul>
-          <li><a href="https://yourpublication.substack.com" target="_blank" rel="noopener">Substack</a></li>
-          <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://bsky.app/profile/yourhandle" target="_blank" rel="noopener">Bluesky</a></li>
+          <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack</a></li>
+          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
