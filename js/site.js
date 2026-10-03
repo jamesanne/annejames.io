@@ -177,6 +177,19 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
   var cards = Array.prototype.slice.call(root.querySelectorAll('[data-tags]'));
   var status = root.querySelector('[data-filter-status]');
   var known = buttons.map(function (b) { return b.getAttribute('data-tag'); });
+  var bar = root.querySelector('.tag-filter');
+  var barHidden = !bar || bar.hidden;
+  // "Show all posts" control, so a filtered view can always be undone (needed when the filter bar is hidden)
+  var reset = null;
+  if (status) {
+    reset = document.createElement('button');
+    reset.type = 'button';
+    reset.className = 'filter-reset';
+    reset.textContent = 'Show all posts';
+    reset.hidden = true;
+    reset.addEventListener('click', function () { apply('all', true); });
+    status.insertAdjacentElement('afterend', reset);
+  }
 
   function apply(tag, updateUrl) {
     if (known.indexOf(tag) === -1) tag = 'all';
@@ -193,9 +206,11 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
     });
     if (status) {
       status.textContent = tag === 'all'
-        ? 'Showing all ' + shown + ' posts'
+        ? (barHidden ? '' : 'Showing all ' + shown + ' posts')
         : 'Showing ' + shown + (shown === 1 ? ' post' : ' posts') + ' tagged ' + label;
+      status.hidden = barHidden && tag === 'all';
     }
+    if (reset) reset.hidden = tag === 'all';
     if (updateUrl && window.history && history.replaceState) {
       // best effort: some sandboxed or file:// contexts refuse to change the address bar
       try { history.replaceState(null, '', tag === 'all' ? location.pathname : '?tag=' + encodeURIComponent(tag)); } catch (e) {}
