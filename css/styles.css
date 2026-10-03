@@ -1077,6 +1077,7 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--ink); outli
 .cover-figure { margin: 0; }
 .cover-figure figcaption { margin-top: 0.6rem; font-size: 0.95rem; color: var(--ink-soft); }
 .cover-figure figcaption a, .post-origin a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.prose [id] { scroll-margin-top: 6rem; }   /* in-page links land below the sticky header */
 .post-origin { margin: -0.25rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
 .data-table--wrap tbody th { white-space: normal; width: 32%; }
 .prose hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
@@ -1091,3 +1092,13 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--ink); outli
 .filter-reset:hover { background: var(--panel); }
 .filter-reset[hidden] { display: none; }
 .tag-filter[hidden] { display: none; }
+
+/* ---------- Article layout: one centred reading column ----------
+   Header, body and byline share a 44rem column (comfortable line length),
+   centred on wide screens and left-aligned inside it. The cover image gets a
+   wider 64rem measure on the same centre line. Below those widths the normal
+   gutter takes over, so mobile is unchanged. */
+:root { --measure: 44rem; --measure-wide: 64rem; }
+.post-head,
+.post-body { padding-inline: max(var(--gutter), calc((100% - var(--measure)) / 2)); }
+.post-cover { padding-inline: max(var(--gutter), calc((100% - var(--measure-wide)) / 2)); }
