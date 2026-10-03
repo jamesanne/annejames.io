@@ -554,6 +554,7 @@ strong { font-weight: 700; }
 .carousel-btn svg { width: 1.2rem; height: 1.2rem; }
 .carousel-btn:disabled { opacity: 0.3; cursor: default; }
 .carousel-btn:disabled:hover { background: var(--ink); }
+.carousel-btn[hidden], .carousel-dots[hidden] { display: none; }
 
 .post-card {
   position: relative;
