@@ -31,7 +31,8 @@
         <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
-        <div class="lang-drop-item">
+        <!-- Language switcher hidden until ES/PT pages are updated. Remove "hidden" to restore. -->
+        <div class="lang-drop-item" hidden>
           <details class="lang-drop">
             <summary aria-label="Language">
               <span class="lang-chip">EN</span>
@@ -57,9 +58,9 @@
             </details>
           </li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="blog/">Writing</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Let's work together</a></li>
+          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Connect</a></li>
         </ul>      </nav>
     </div>
   </header>
@@ -68,7 +69,13 @@
     <section>
       <div class="wrap hero">
         <h1>Innovate without compromising your values.</h1>
-        <p class="lede">I guide museum and tourism leaders through AI noise, helping them keep public trust.</p>
+        <p class="lede">I help museum and tourism leaders cut through the AI noise and make decisions their public can trust.</p>
+        <ul class="hero-services" aria-label="Services">
+          <li>Strategy workshops</li>
+          <li>Audience research</li>
+          <li>AI governance</li>
+          <li>Staff training</li>
+        </ul>
       </div>
     </section>
 
@@ -85,12 +92,13 @@
               <div>
                 <p class="accordion-kicker">GLAM: Galleries, Libraries, Archives, Museums</p>
                 <h4>Strategic clarity as your institution evolves</h4>
-                <p>Together, we’ll work through complex trade-offs around visitor-facing AI, curation and programming, fundraising, and internal digital transformation. I bring the evidence, you make informed choices.</p>
+                <p>I bring the evidence, you make informed choices. Together, we’ll work through complex trade-offs around visitor-facing AI, programming, fundraising, and digital transformation.</p>
                 <a href="services-museums.html">Explore workshops &amp; deliverables →</a>
               </div>
-              <div class="accordion-media">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-                <span class="sr-only">Space reserved for a photo</span>
+              <div class="accordion-media accordion-media--photo">
+                <!-- Alternate, pending artist permission: images/home/red-threads-*.webp (Chiharu Shiota installation, photo Martin Porter / Unsplash) -->
+                <img class="focus-figure" src="images/home/prism-visitor-1200.webp" srcset="images/home/prism-visitor-800.webp 800w, images/home/prism-visitor-1200.webp 1200w, images/home/prism-visitor-2000.webp 2000w" sizes="(min-width: 52em) 50vw, 100vw" alt="A visitor in the concrete atrium of M+ in Hong Kong looks up as light from a skylight scatters into rainbows across the floor" width="2000" height="1900" loading="lazy" decoding="async">
+                <p class="photo-credit">Photo: Cai Fang / Unsplash, at M+, Hong Kong</p>
               </div>
             </div>
           </details>
@@ -102,13 +110,13 @@
             <div class="accordion-body">
               <div>
                 <p class="accordion-kicker">Guest Trust in Phygital Space</p>
-                <h4>Cultural intelligence as your guest experience expands</h4>
+                <h4>Cultural insights for a better guest experience</h4>
                 <p>Travelers see right through performative values. We’ll deepen their trust by making the right calls on AI tools, data governance, and vendor selection across your digital stack and service supply chain.</p>
-                <a href="services-tourism.html">Browse my menu of services →</a>
+                <a href="services-tourism.html">Explore projects &amp; deliverables →</a>
               </div>
-              <div class="accordion-media">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-                <span class="sr-only">Space reserved for a photo</span>
+              <div class="accordion-media accordion-media--photo">
+                <img src="images/home/pink-street-1200.webp" srcset="images/home/pink-street-800.webp 800w, images/home/pink-street-1200.webp 1200w, images/home/pink-street-2400.webp 2400w" sizes="(min-width: 52em) 50vw, 100vw" alt="Rainbow umbrellas suspended above Pink Street in Lisbon" width="2400" height="1631" loading="lazy" decoding="async">
+                <p class="photo-credit">Photo: Tatjana Petkevica / Unsplash, Pink Street, Lisbon</p>
               </div>
             </div>
           </details>
@@ -123,22 +131,41 @@
         <div class="panel-grid panel-grid--3">
           <div class="panel panel--outline">
             <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2 4.6-4.6 2 2-4.6z"/></svg>
-            <p class="accordion-kicker">Credentialed Anthropologist</p>
-            <h4>Studying your audience with research-institution rigor</h4>
-            <p>MSc, University of Edinburgh<br>BA, Boston University<br>Certified AI Governance Professional, IAPP<br>Researcher, Center for AI &amp; Digital Policy</p>
+            <p class="accordion-kicker">Trained Anthropologist</p>
+            <h4>Evidence-based audience research</h4>
+            <p>Degrees from the University of Edinburgh and Boston University.</p>
           </div>
           <div class="panel panel--outline">
             <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.5-3 7.7-7 9.5-4-1.8-7-5-7-9.5V6z"/></svg>
             <p class="accordion-kicker">Board Leadership</p>
             <h4>Years at the helm, not just advising from outside</h4>
-            <p>Board Member, PhotoIreland<br>Former Treasurer, New England Poetry Club<br>Former Fundraising &amp; Major Giving Consultant, Threshold Ireland</p>
+            <p>11 years of combined board service at cultural organizations.</p>
           </div>
           <div class="panel panel--outline">
             <svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16l5-5 4 4 7-8"/><path d="M15 7h5v5"/></svg>
-            <p class="accordion-kicker">Chief Marketing Officer, AI Software</p>
+            <p class="accordion-kicker">Marketing Leader, AI Vendors</p>
             <h4>I've sold what I now help you govern</h4>
-            <p>10+ years working alongside founders and engineering leaders in enterprise software, including AI companies partnered with NVIDIA and Anthropic.</p>
+            <p>10+ years in AI software. IAPP-certified AI Governance Professional (AIGP).</p>
           </div>
+        </div>
+        <p class="section-more"><a href="about.html">My approach &rarr;</a></p>
+        <!-- Testimonials hidden until each person approves their quote. Remove the "hidden" attribute to show. -->
+        <div class="testimonials-wrap" hidden>
+          <div class="testimonials">
+            <figure class="testimonial">
+              <blockquote><p>“I can’t speak highly enough about the level of care, thoughtfulness, and strategic vision she brings… She’s a creative problem solver with strategic clarity and the added bonus of being lovely to work with.”</p></blockquote>
+              <figcaption><strong>Jean Massad</strong>Founder, Konpo</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote><p>“Anne is a brilliant and delightful professional to collaborate with. Her positive attitude, creativity, keen observation, and excellent listening skills make her an outstanding asset to any team.”</p></blockquote>
+              <figcaption><strong>Jillian Hufnagel</strong>Executive Coach; former Head of Culture, Slim.AI</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote><p>“From day one, Anne brought heart and discipline to everything she touched… she set the bar for how work should be managed, reported, and communicated.”</p></blockquote>
+              <figcaption><strong>Jose Luis Cruz, Jr.</strong>Founder, Integrated Projects</figcaption>
+            </figure>
+          </div>
+          <p class="testimonials-more"><a href="https://www.linkedin.com/in/jamesanne/details/recommendations/" target="_blank" rel="noopener">Read all recommendations on LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></p>
         </div>
       </div>
     </section>
@@ -146,7 +173,7 @@
     <section>
       <div class="wrap">
         <div class="carousel-head">
-          <h2>From the blog</h2>
+          <h2>Writing</h2>
           <a href="blog/">All posts &rarr;</a>
         </div>
       </div>
@@ -242,45 +269,26 @@
         <div class="carousel-dots"></div>
       </div>
     </section>
-
-    <section class="section--lilac">
-      <div class="wrap">
-        <div class="newsletter">
-          <div>
-            <p class="newsletter__eyebrow">Newsletter</p>
-            <h2>If you can't use it, I don't send it.</h2>
-            <p class="lede">When I come across a really sticky challenge in museums and tourism, I publish a practical guide to help you think through it.</p>
-            <div class="newsletter__form">
-              <a class="btn btn--primary" href="https://jamesanne.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a>
-            </div>
-          </div>
-          <div class="newsletter__media" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section>
       <div class="wrap">
-        <h2>Latest Projects</h2>
+        <h2>Selected Projects</h2>
         <div class="project-grid">
-          <a class="project-card project-card--minimal" href="case-studies/science-museum.html">
+          <a class="project-card project-card--minimal" href="case-studies/photoireland.html">
             <div class="project-card__image-wrap">
               <div class="project-card__media" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                <img src="images/projects/photoireland-1200.webp" srcset="images/projects/photoireland-800.webp 800w, images/projects/photoireland-1200.webp 1200w, images/projects/photoireland-1600.webp 1600w" sizes="(min-width: 42em) 45vw, 100vw" alt="" width="1600" height="1293" loading="lazy" decoding="async">
               </div>
-              <h3 class="project-card__title">Science Museum</h3>
-              <p class="project-card__subtitle">A pre-launch risk review for their first visitor chatbot</p>
+              <h3 class="project-card__title">PhotoIreland</h3>
+              <p class="project-card__subtitle">An AI values statement and staff policy for Ireland’s new International Centre for the Image. Starting October 2026.</p>
             </div>
           </a>
-          <a class="project-card project-card--minimal" href="case-studies/hotel-group.html">
+          <a class="project-card project-card--minimal" href="case-studies/zymbol.html">
             <div class="project-card__image-wrap">
               <div class="project-card__media" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+                <img src="images/projects/zymbol-1024.webp" srcset="images/projects/zymbol-600.webp 600w, images/projects/zymbol-1024.webp 1024w" sizes="(min-width: 42em) 45vw, 100vw" alt="Zymbol Issue 6, with a cover painting by Clive Barker" width="1024" height="768" loading="lazy" decoding="async">
               </div>
-              <h3 class="project-card__title">Hotel Group</h3>
-              <p class="project-card__subtitle">A risk review before their AI concierge launched</p>
+              <h3 class="project-card__title">Zymbol</h3>
+              <p class="project-card__subtitle">Founding an international magazine of contemporary literature and art, 2012–2017.</p>
             </div>
           </a>
         </div>
@@ -288,11 +296,20 @@
       </div>
     </section>
 
-    <section class="section--blush section--grain">
-      <div class="wrap center">
-        <h2>Get unblocked this week</h2>
-        <p class="lede" style="margin-inline:auto;">30 minutes, free. Tell me what you're stuck on. Leave with next steps, whether or not we take them together.</p>
-        <a class="btn btn--primary" href="contact.html">Book now</a>
+    <section class="cta-band" aria-label="Stay in touch">
+      <div class="cta-pair">
+        <div class="cta-card section--lilac">
+          <p class="cta-card__eyebrow">Newsletter</p>
+          <h2>If you can't use it, I don't send it.</h2>
+          <p class="lede">Occasional dispatches on responsible AI, culture and policy.</p>
+          <a class="cta-card__link" href="https://jamesanne.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack<span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+        <div class="cta-card section--blush section--grain">
+          <p class="cta-card__eyebrow">Let's talk</p>
+          <h2>Get unblocked this week</h2>
+          <p class="lede">I offer 30-minute consultations at no charge for boards and leadership teams.</p>
+          <a class="cta-card__link" href="contact.html#book">Book a call</a>
+        </div>
       </div>
     </section>
   </main>
@@ -300,33 +317,30 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <h4>Site</h4>
         <ul>
           <li><a href="services-museums.html">Museums &amp; Culture</a></li>
           <li><a href="services-tourism.html">Tourism &amp; Travel</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-grid__spacer" aria-hidden="true">&nbsp;</h4>
         <ul>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="blog/">Writing</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Connect</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
         <ul>
-          <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack</a></li>
-          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </div>
     </div>
     <div class="wrap footer-bottom">
       <span>© 2026 Anne James</span>
       <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="cookies.html">Cookies Policy</a></span>
-      <span>Built for low page weight — <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">carbon-conscious by design</a>.</span>
+      <span>Built for low page weight — <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">carbon-conscious by design<span class="sr-only"> (opens in a new tab)</span></a>.</span>
     </div>
   </footer>
 

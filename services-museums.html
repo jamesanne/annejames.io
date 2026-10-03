@@ -32,7 +32,8 @@
         <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
-        <div class="lang-drop-item">
+        <!-- Language switcher hidden until ES/PT pages are updated. Remove "hidden" to restore. -->
+        <div class="lang-drop-item" hidden>
           <details class="lang-drop">
             <summary aria-label="Language">
               <span class="lang-chip">EN</span>
@@ -58,9 +59,9 @@
             </details>
           </li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="blog/">Writing</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Let's work together</a></li>
+          <li class="nav-cta-item"><a class="btn btn--primary btn--nav" href="contact.html">Connect</a></li>
         </ul>      </nav>
     </div>
   </header>
@@ -76,20 +77,32 @@
     <section style="padding-top: 0;">
       <div class="wrap" data-tabs>
         <h2>Ways to work together</h2>
-        <div class="svc-tabs" role="tablist" aria-label="Ways to work together">
-          <button class="svc-tab" role="tab" id="tab-governance" aria-controls="governance" aria-selected="true" type="button">AI governance framework</button>
-          <button class="svc-tab" role="tab" id="tab-values" aria-controls="values" aria-selected="false" tabindex="-1" type="button">Values &amp; code of conduct</button>
-          <button class="svc-tab" role="tab" id="tab-skills" aria-controls="skills" aria-selected="false" tabindex="-1" type="button">AI skills for staff</button>
-          <button class="svc-tab" role="tab" id="tab-procurement" aria-controls="procurement" aria-selected="false" tabindex="-1" type="button">Vendor procurement</button>
+        <div class="svc-tabs">
+          <div class="svc-tabgroup">
+            <p class="svc-tabgroup__label" id="grp-strategy">Strategy &amp; audience</p>
+            <div class="svc-tabgroup__tabs" role="tablist" aria-labelledby="grp-strategy">
+              <button class="svc-tab" role="tab" id="tab-planning" aria-controls="planning" aria-selected="true" type="button">Strategic planning</button>
+              <button class="svc-tab" role="tab" id="tab-listening" aria-controls="listening" aria-selected="false" tabindex="-1" type="button">Community listening</button>
+              <button class="svc-tab" role="tab" id="tab-values" aria-controls="values" aria-selected="false" tabindex="-1" type="button">Values &amp; code of conduct</button>
+            </div>
+          </div>
+          <div class="svc-tabgroup">
+            <p class="svc-tabgroup__label" id="grp-ai">AI governance</p>
+            <div class="svc-tabgroup__tabs" role="tablist" aria-labelledby="grp-ai">
+              <button class="svc-tab" role="tab" id="tab-governance" aria-controls="governance" aria-selected="false" tabindex="-1" type="button">AI governance framework</button>
+              <button class="svc-tab" role="tab" id="tab-skills" aria-controls="skills" aria-selected="false" tabindex="-1" type="button">AI skills for staff</button>
+              <button class="svc-tab" role="tab" id="tab-procurement" aria-controls="procurement" aria-selected="false" tabindex="-1" type="button">Vendor procurement</button>
+            </div>
+          </div>
         </div>
 
-        <article class="svc-panel is-active" id="governance">
+        <article class="svc-panel is-active" id="planning">
           <div class="svc-card">
             <div class="svc-card__top">
               <div>
                 <p class="svc-chip">Consulting program</p>
-                <h3 class="svc-card__title">Build an AI governance framework</h3>
-                <p>Define the principles, roles and review steps that guide how your institution adopts AI, from collections metadata to visitor-facing tools.</p>
+                <h3 class="svc-card__title">Build a strategic plan</h3>
+                <p>Set your direction for the next three to five years with a plan grounded in what your communities, staff and funders actually need, and one your team can use to make everyday decisions.</p>
                 <a class="btn btn--primary" href="contact.html">Request a tailored proposal</a>
               </div>
               <div class="svc-card__media" aria-hidden="true">
@@ -97,25 +110,63 @@
               </div>
             </div>
             <dl class="svc-facts">
-              <div><dt>Format</dt><dd>Embedded engagement, on-site and remote</dd></div>
-              <div><dt>Duration</dt><dd>6 to 10 weeks</dd></div>
-              <div><dt>Participants</dt><dd>Digital, collections, legal and visitor-experience leads</dd></div>
+              <div><dt>Format</dt><dd>Facilitated engagement, on-site and remote</dd></div>
+              <div><dt>Duration</dt><dd>3 to 6 months</dd></div>
+              <div><dt>Participants</dt><dd>Director, board and senior leadership, with input from staff and community partners</dd></div>
               <div><dt>What you get</dt><dd>
                 <ul>
-                    <li>A framework your team can apply on a normal Tuesday</li>
-                    <li>Named decision owners and a review process</li>
-                    <li>A plain-language summary for your board</li>
+                    <li>A strategic plan with clear priorities, owners and measures</li>
+                    <li>A plain-language summary for your board and funders</li>
+                    <li>A simple rhythm for reviewing progress each year</li>
                 </ul>
               </dd></div>
             </dl>
             <div class="svc-program">
               <h4>The program includes</h4>
               <ol>
-              <li><strong>Map current and planned AI use</strong> across collections, visitor tools, marketing and back-office systems.</li>
-              <li><strong>Assess the risks</strong> to public trust, provenance, source communities, staff and donor privacy.</li>
-              <li><strong>Draft principles and decision rules</strong> with your leadership team, including who signs off and when.</li>
-              <li><strong>Set up a lightweight review process</strong> for new tools, vendors and pilots.</li>
-              <li><strong>Document and hand over</strong> the framework, with a plan to revisit it as regulation and practice change.</li>
+              <li><strong>Listen first:</strong> interviews with leadership, staff, board and key partners, alongside a review of your audience data.</li>
+              <li><strong>Read the landscape:</strong> funding, visitor trends, technology and regulation, including where AI fits and where it doesn’t.</li>
+              <li><strong>Set priorities</strong> with your leadership team in facilitated working sessions.</li>
+              <li><strong>Draft the plan</strong> with goals, owners and measures that are realistic for your resources.</li>
+              <li><strong>Present and hand over</strong> to your board, with a light process for checking progress each year.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc-panel" id="listening">
+          <div class="svc-card">
+            <div class="svc-card__top">
+              <div>
+                <p class="svc-chip">Research</p>
+                <h3 class="svc-card__title">Community listening</h3>
+                <p>Find out what your communities want to talk about, see and take part in, before you commit budget to new programming.</p>
+                <a class="btn btn--primary" href="contact.html">Request a tailored proposal</a>
+              </div>
+              <div class="svc-card__media" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+              </div>
+            </div>
+            <dl class="svc-facts">
+              <div><dt>Format</dt><dd>Listening sessions and interviews, in person where it matters</dd></div>
+              <div><dt>Duration</dt><dd>6 to 10 weeks</dd></div>
+              <div><dt>Participants</dt><dd>Visitors, non-visitors, community groups and the partners you want to reach</dd></div>
+              <div><dt>What you get</dt><dd>
+                <ul>
+                    <li>A findings report in plain language</li>
+                    <li>Programming recommendations tied to what you heard</li>
+                    <li>A plan to report back to the people who took part</li>
+                </ul>
+              </dd></div>
+            </dl>
+            <div class="svc-program">
+              <h4>The program includes</h4>
+              <ol>
+              <li><strong>Agree what you need to learn</strong> and whose voices are missing today.</li>
+              <li><strong>Design the approach:</strong> who to invite, where to meet, and how to make taking part easy and fair.</li>
+              <li><strong>Run listening sessions and interviews,</strong> with your staff involved where it helps.</li>
+              <li><strong>Make sense of what you heard,</strong> looking for patterns, tensions and surprises.</li>
+              <li><strong>Turn findings into programming recommendations</strong> and a plan to close the loop with participants.</li>
               </ol>
             </div>
           </div>
@@ -154,6 +205,44 @@
               <li><strong>Translate it into a staff code of conduct</strong> with concrete dos and don'ts for everyday decisions.</li>
               <li><strong>Test it against real scenarios</strong> from your collections, programs and communications.</li>
               <li><strong>Plan the rollout:</strong> where it is published, how staff are briefed, and when it is reviewed.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc-panel" id="governance">
+          <div class="svc-card">
+            <div class="svc-card__top">
+              <div>
+                <p class="svc-chip">Consulting program</p>
+                <h3 class="svc-card__title">Build an AI governance framework</h3>
+                <p>Define the principles, roles and review steps that guide how your institution adopts AI, from collections metadata to visitor-facing tools.</p>
+                <a class="btn btn--primary" href="contact.html">Request a tailored proposal</a>
+              </div>
+              <div class="svc-card__media" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+              </div>
+            </div>
+            <dl class="svc-facts">
+              <div><dt>Format</dt><dd>Embedded engagement, on-site and remote</dd></div>
+              <div><dt>Duration</dt><dd>6 to 10 weeks</dd></div>
+              <div><dt>Participants</dt><dd>Digital, collections, legal and visitor-experience leads</dd></div>
+              <div><dt>What you get</dt><dd>
+                <ul>
+                    <li>A framework your team can apply on a normal Tuesday</li>
+                    <li>Named decision owners and a review process</li>
+                    <li>A plain-language summary for your board</li>
+                </ul>
+              </dd></div>
+            </dl>
+            <div class="svc-program">
+              <h4>The program includes</h4>
+              <ol>
+              <li><strong>Map current and planned AI use</strong> across collections, visitor tools, marketing and back-office systems.</li>
+              <li><strong>Assess the risks</strong> to public trust, provenance, source communities, staff and donor privacy.</li>
+              <li><strong>Draft principles and decision rules</strong> with your leadership team, including who signs off and when.</li>
+              <li><strong>Set up a lightweight review process</strong> for new tools, vendors and pilots.</li>
+              <li><strong>Document and hand over</strong> the framework, with a plan to revisit it as regulation and practice change.</li>
               </ol>
             </div>
           </div>
@@ -249,33 +338,30 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <h4>Site</h4>
         <ul>
           <li><a href="services-museums.html">Museums &amp; Culture</a></li>
           <li><a href="services-tourism.html">Tourism &amp; Travel</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="footer-grid__spacer" aria-hidden="true">&nbsp;</h4>
         <ul>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="blog/">Writing</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Connect</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
         <ul>
-          <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack</a></li>
-          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://jamesanne.substack.com" target="_blank" rel="noopener">Substack<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/jamesanne/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </div>
     </div>
     <div class="wrap footer-bottom">
       <span>© 2026 Anne James</span>
       <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="cookies.html">Cookies Policy</a></span>
-      <span>Built for low page weight — <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">carbon-conscious by design</a>.</span>
+      <span>Built for low page weight — <a href="https://www.websitecarbon.com/" target="_blank" rel="noopener">carbon-conscious by design<span class="sr-only"> (opens in a new tab)</span></a>.</span>
     </div>
   </footer>
 
