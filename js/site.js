@@ -198,7 +198,11 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
     status.insertAdjacentElement('afterend', reset);
   }
 
+  // renamed tags: old slug -> new slug, so previously shared ?tag= links still work
+  var renamed = { 'policy-leadership': 'policy' };
+
   function apply(tag, updateUrl) {
+    if (renamed[tag]) tag = renamed[tag];
     if (known.indexOf(tag) === -1) tag = 'all';
     var shown = 0, label = '';
     cards.forEach(function (c) {
@@ -236,4 +240,12 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
   });
   var m = /[?&]tag=([^&]+)/.exec(location.search);
   apply(m ? decodeURIComponent(m[1]) : 'all', false);
+});
+
+// Email: assembled at runtime from reversed parts so scrapers reading the HTML don't find it
+document.querySelectorAll('a.js-email').forEach(function (a) {
+  var rev = function (t) { return (t || '').split('').reverse().join(''); };
+  var addr = rev(a.getAttribute('data-u')) + String.fromCharCode(64) + rev(a.getAttribute('data-d'));
+  a.setAttribute('href', 'mai' + 'lto:' + addr);
+  a.textContent = addr;
 });
