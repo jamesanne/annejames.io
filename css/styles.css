@@ -769,6 +769,12 @@ strong { font-weight: 700; }
   .newsletter h2 { max-width: 36rem; }
   .newsletter .lede { max-width: 34rem; }
 }
+/* Centered variant: text only, no media box */
+.newsletter--centered { text-align: center; justify-items: center; }
+.newsletter--centered h2, .newsletter--centered .lede { margin-inline: auto; }
+.newsletter--centered h2 { text-wrap: balance; }
+.newsletter--centered .newsletter__form { justify-content: center; }
+@media (min-width: 52em) { .newsletter--centered { grid-template-columns: 1fr; } }
 
 /* ---------- Portrait ---------- */
 .portrait {
@@ -998,6 +1004,8 @@ a.tag:hover, a.tag:focus-visible { background: var(--tag-hover); }
 
 /* case study page */
 .hero.hero--compact, .hero.hero--tight { padding-block: clamp(2.5rem, 5vw, 4.5rem) 2rem; }
+/* Hero section with no outer padding: content below (e.g. the blog filter bar) sits right under the headline */
+section.section--flush { padding-block: 0; }
 .post-meta .tag, .hero .post-tags .tag { font-size: 0.9rem; padding: 0.25rem 0.65rem; }
 .hero.hero--compact h1 { font-size: clamp(2.6rem, 1.6rem + 5vw, 7rem); line-height: 1.02; letter-spacing: -0.02em; }
 .cs-layout { display: grid; gap: 2.5rem; }
@@ -1221,3 +1229,14 @@ span.tag { background: var(--panel); }
 @media (min-width: 42em) and (max-width: 63.99em) { .now-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 64em) { .now-grid { grid-template-columns: repeat(3, 1fr); } }
 .now-card__date { display: block; margin-top: 0.2rem; font-weight: 400; }
+
+/* ---------- About page additions ---------- */
+.bio--top { align-items: start; }
+@media (min-width: 42em) { .panel-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64em) { .panel-grid--4 { grid-template-columns: repeat(4, 1fr); } }
+.topic-list { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.topic-list li { border: 1px solid var(--line); border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.95rem; }
+.measure > p { max-width: 44rem; }
+.cred-list { list-style: none; padding: 0; margin: 0; }
+.cred-list li { margin: 0 0 0.75rem; line-height: 1.4; }
+.cred-list li:last-child { margin-bottom: 0; }
