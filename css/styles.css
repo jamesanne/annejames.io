@@ -1232,11 +1232,33 @@ span.tag { background: var(--panel); }
 
 /* ---------- About page additions ---------- */
 .bio--top { align-items: start; }
+/* headshot column sized to the photo, so the bio sits right beside it (no dead gap) */
+@media (min-width: 52em) {
+  .bio { grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); gap: clamp(2.5rem, 4vw, 3.5rem); }
+}
 @media (min-width: 42em) { .panel-grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 64em) { .panel-grid--4 { grid-template-columns: repeat(4, 1fr); } }
 .topic-list { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.topic-list li { border: 1px solid var(--line); border-radius: 999px; padding: 0.45rem 1rem; font-size: 0.95rem; }
+.topic-list li { background: var(--panel); border-radius: 5px; padding: 0.4rem 0.85rem; font-weight: 500; line-height: 1.3; font-size: 0.95rem; } /* static label: blush fill, same corners as every other tag */
 .measure > p { max-width: 44rem; }
 .cred-list { list-style: none; padding: 0; margin: 0; }
 .cred-list li { margin: 0 0 0.75rem; line-height: 1.4; }
 .cred-list li:last-child { margin-bottom: 0; }
+
+/* Newsletter (Writing page): match the width of the other centred CTA bands */
+.newsletter--centered { padding: 0; }
+.newsletter--centered h2 { max-width: 44rem; }
+.newsletter--centered .lede { max-width: 38rem; }
+
+/* ---------- About: pull quote on a grain band ---------- */
+.pull-quote {
+  margin: 0 auto; max-width: 52rem;
+  padding: 0.25rem 0 0.25rem clamp(1.25rem, 3vw, 2rem);
+  border-left: 4px solid var(--spark);
+}
+.pull-quote p {
+  margin: 0; max-width: none;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem); line-height: 1.38;
+  color: var(--plum); text-wrap: pretty;
+}
