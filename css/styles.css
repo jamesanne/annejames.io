@@ -880,6 +880,9 @@ html:not(.js) .svc-panel + .svc-panel { margin-top: 2rem; }
   display: flex; align-items: center; justify-content: center;
 }
 .svc-card__media svg { width: 2.75rem; height: 2.75rem; opacity: 0.55; }
+/* real photo in a service card: fills the box (4:3 desktop, 16:9 mobile), trimming top/bottom evenly on mobile */
+.svc-card__media:has(img) { position: relative; overflow: hidden; background: var(--paper); }
+.svc-card__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 
 .svc-facts { display: grid; gap: 1.5rem 2rem; margin: 2.25rem 0 0; }
 .svc-facts dt {
