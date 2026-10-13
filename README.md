@@ -54,18 +54,27 @@ Cloudflare until the domain moves to Infomaniak.
 ### 2. Share images and preview text (before calling the site done)
 Every page needs its title, meta description, `og:title`, `og:description`,
 `og:image` and `og:image:alt` reviewed. Share images are 1200×630.
-- [ ] Create the default share image and upload it as `images/share-default.jpg`.
-      **It isn't in the repo yet**, so 11 English pages currently point to a
-      missing image: home, both services pages, projects, about, contact, blog
-      index, privacy, cookies and both case studies
-- [ ] Decide which pages get their own share image instead of the default
-      (e.g. the services pages and case studies)
-- [ ] Update `og:image:alt` on those 11 pages. It still says "Portrait of Anne
-      James", and the share image won't be your headshot
-- [ ] Review the share images and text for the six blog posts, which already
-      have their own `images/blog/*-social.jpg`
+- [x] Default share image `images/share-default.jpg` replaced (it was the
+      headshot): split screen with Cai Fang's M+ photo from the home page on
+      the left and a plum panel on the right ("Anne James / Strategy and AI
+      governance for cultural spaces and tourism / annejames.io"). Used by
+      home, projects, about, contact, blog index, privacy and cookies. Always
+      "strategy" before "AI governance" in titles and copy
+- [x] Own share images for the services pages and case studies:
+      `images/services/museums-social.jpg` (community listening photo),
+      `images/services/tourism-social.jpg` (guest insight photo),
+      `images/projects/photoireland-social.jpg`, `images/projects/zymbol-social.jpg`
+- [x] `og:image:alt` updated on all 11 pages to describe the new images
+- [x] Blog share images and text reviewed: images match their alt text. Added
+      `og:url` (the annejames.io address) so a shared annejames.io link
+      previews as this site rather than falling back to the Substack canonical
+- [x] Fixed descriptions: privacy (said "EU-only hosting and analytics";
+      there are none), cookies (now says no cookies are set), and shortened
+      projects and about to under 160 characters
 - [ ] Preview each page in a link-preview checker (or by pasting the link into
-      LinkedIn) once the site is live on statichost
+      LinkedIn Post Inspector, linkedin.com/post-inspector) after pushing.
+      LinkedIn caches previews for about 7 days, so re-inspect any page shared
+      before this change
 
 ### 3. Privacy and cookies pages (English done; check before publishing)
 - [ ] Confirm or adjust the retention periods for email and bookings
