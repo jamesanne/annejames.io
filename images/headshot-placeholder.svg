@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="ph-title">
+  <title id="ph-title">Placeholder portrait — replace with your headshot</title>
+  <rect width="400" height="400" fill="#f3e8e9"/>
+  <circle cx="200" cy="160" r="70" fill="#dfd7f5"/>
+  <path d="M60 380c0-90 63-150 140-150s140 60 140 150" fill="#dfd7f5"/>
+</svg>
