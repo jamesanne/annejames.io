@@ -5,8 +5,10 @@ cultural institutions and tourism and travel brands. Plain static HTML/CSS,
 one shared stylesheet and one small script. No build step, no framework, and
 no third-party requests.
 
-Code lives on GitHub. The site is moving from Cloudflare/GitHub Pages to
-statichost.eu (EU hosting, no visitor IP logging).
+Code lives on GitHub. Hosting is on statichost.eu (Sweden, EU-only
+infrastructure, no visitor IP logging) at `annejamesio.statichost.page`, and
+every push to GitHub republishes the site through a webhook. DNS is still at
+Cloudflare until the domain moves to Infomaniak.
 
 ---
 
@@ -14,25 +16,38 @@ statichost.eu (EU hosting, no visitor IP logging).
 
 ### 1. Move hosting to the EU
 - [x] Step 1: push the current site to GitHub (includes `statichost.yml`)
-- [ ] Step 2: create the site on statichost.eu, connect the repo (HTTPS URL if
+- [x] Step 2: create the site on statichost.eu, connect the repo (HTTPS URL if
       the repo is public; SSH URL plus a deploy key if it's private), and check
       the site at `SITENAME.statichost.page`
-- [ ] Step 3: GitHub → Settings → Webhooks → add
+- [x] Step 3: GitHub → Settings → Webhooks → add
       `https://builder.statichost.eu/SITENAME`, content type `application/json`,
       "Just the push event"
-- [ ] Step 4: statichost → site → Settings → Domains: add `annejames.io` and
+- [x] Step 4: statichost → site → Settings → Domains: add `annejames.io` and
       `www.annejames.io`
-- [ ] Step 5: in Cloudflare DNS, screenshot all existing records first. Then
-      set the root to `A 95.217.26.94` and `AAAA 2a01:4f9:c01f:8002::`, set
-      `www` to `CNAME SITENAME.statichost.page`, all **DNS only (grey cloud)**.
-      Once the site loads, delete the Cloudflare Pages project and turn off
-      GitHub Pages
-- [ ] Step 6: transfer the domain from Porkbun to Infomaniak (unlock it and
-      use the auth code)
+- [x] Step 5: Cloudflare DNS now points at statichost (A `95.217.26.94`,
+      AAAA `2a01:4f9:c01f:8002::`, `www` CNAME `annejamesio.statichost.page`,
+      all DNS only). annejames.io serves from statichost (Let's Encrypt
+      certificate, 13 Oct 2026)
+- [x] Check `https://www.annejames.io` also shows a Let's Encrypt certificate
+- [x] Turn off GitHub Pages: repo → Settings → Pages → remove the custom
+      domain and unpublish
+- [ ] Step 6: transfer the domain from GoDaddy to Infomaniak (paused 13 Oct,
+      to finish when funds are available). At GoDaddy, turn off Domain Lock
+      and get the authorization code. At Infomaniak, choose:
+      - Transfer annejames.io (€52.10, includes a year's renewal)
+      - Domain Privacy: **yes**. DNS Fast Anycast: no (or take the €4.90
+        "Domain Plus" bundle if Privacy can't be chosen alone)
+      - Website: **"No, I do not need a website right now"**
+      - Owner: yourself
+      - **Untick** "After the transfer has been completed, use the Infomaniak
+        DNS server" so the site stays up with no downtime
+      - Paste the authorization code
+      - Approve GoDaddy's outgoing-transfer email to speed things up (otherwise
+        it takes about 5 days)
 - [ ] Step 7: recreate the DNS records at Infomaniak, confirm the domain uses
       Infomaniak's nameservers, then delete the site from Cloudflare and close
       the account
-- [ ] Delete the `CNAME` file. Only GitHub Pages used it
+- [x] Delete the `CNAME` file. Only GitHub Pages used it
 - [ ] Ask statichost (hello@statichost.eu) whether a second site can go on the
       free plan, or what a second site costs
 
@@ -80,7 +95,6 @@ Every page needs its title, meta description, `og:title`, `og:description`,
 ### 6. Nice to have
 - [ ] A custom 404 page (statichost supports one)
 - [ ] `robots.txt` and `sitemap.xml`
-- [ ] Run the live site through Website Carbon, since every footer links there
 
 ---
 
