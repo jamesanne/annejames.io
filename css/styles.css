@@ -787,7 +787,7 @@ strong { font-weight: 700; }
 }
 /* Centered variant: text only, no media box */
 .newsletter--centered { text-align: center; justify-items: center; }
-.newsletter--centered h2, .newsletter--centered .lede { margin-inline: auto; }
+.newsletter--centered h2, .newsletter--centered .lede, .newsletter--centered .newsletter__eyebrow { margin-inline: auto; }
 .newsletter--centered h2 { text-wrap: balance; }
 .newsletter--centered .newsletter__form { justify-content: center; }
 @media (min-width: 52em) { .newsletter--centered { grid-template-columns: 1fr; } }
