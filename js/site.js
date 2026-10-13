@@ -246,6 +246,13 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
 document.querySelectorAll('a.js-email').forEach(function (a) {
   var rev = function (t) { return (t || '').split('').reverse().join(''); };
   var addr = rev(a.getAttribute('data-u')) + String.fromCharCode(64) + rev(a.getAttribute('data-d'));
-  a.setAttribute('href', 'mai' + 'lto:' + addr);
-  a.textContent = addr;
+  var subject = a.getAttribute('data-subject');
+  if (subject) {
+    // Service buttons: pre-fill subject and a short prompt, keep the button's own label
+    var body = 'Hi Anne,\r\n\r\nOur organization:\r\nWhat we are working on:\r\nTiming:\r\n';
+    a.setAttribute('href', 'mai' + 'lto:' + addr + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
+  } else {
+    a.setAttribute('href', 'mai' + 'lto:' + addr);
+    a.textContent = addr;
+  }
 });
