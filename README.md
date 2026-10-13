@@ -63,7 +63,7 @@ without touching this site at all.
 
 ## Design & accessibility notes
 
-- **Type:** Gloock (headers) + Inclusive Sans (body), loaded from Google Fonts
+- **Type:** Newsreader (headers) + Inclusive Sans (body), self-hosted in `/fonts` as subsetted WOFF files (SIL Open Font Licence, copies alongside). No requests to Google Fonts.
   with `font-display: swap`. Base body size is 19px with 1.65 line-height —
   deliberately larger than the 16px web default so it stays comfortable for
   older readers on a phone screen at a conference.
