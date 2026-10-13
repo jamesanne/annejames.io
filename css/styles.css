@@ -1282,3 +1282,7 @@ span.tag { background: var(--panel); }
   font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem); line-height: 1.38;
   color: var(--plum); text-wrap: pretty;
 }
+
+/* ---------- Service cards: email button + "or book a call" ---------- */
+.svc-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+.svc-cta__alt { color: var(--ink); font-weight: 500; text-underline-offset: 3px; }
