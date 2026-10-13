@@ -120,8 +120,11 @@ statichost.yml            statichost.eu config: publish the repo root as-is
 - **No third parties on the page.** No analytics, embeds, tracking pixels or
   outside fonts or scripts. Substack, LinkedIn and meetergo are plain links
   only. If that ever changes, update the privacy and cookies pages first.
-- **Credit every image.** Every photo carries a visible credit (e.g.
-  "Photo: … / Unsplash").
+- **Image credits.** Feature photos (home page, blog, case studies) carry a
+  visible credit (e.g. "Photo: … / Unsplash"). The decorative images on the
+  services pages have no credit and `alt=""`. Before adding an uncredited
+  image, check that its licence doesn't require attribution. Unsplash's
+  licence doesn't; Creative Commons BY licences do.
 - **Email address.** It never appears in the HTML. `site.js` assembles it from
   reversed parts:
   `<a class="js-email" data-u="semajenna" data-d="moc.kite" href="#">`.
