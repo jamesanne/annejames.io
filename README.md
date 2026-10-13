@@ -153,6 +153,11 @@ statichost.yml            statichost.eu config: publish the repo root as-is
   `<a class="js-email" data-u="semajenna" data-d="moc.kite" href="#">`.
 - **Blog posts** keep their original Substack publish date and carry a
   canonical link and a visible link back to the original.
+- **Outside links open in a new tab.** Any link that leaves annejames.io
+  (Substack included) gets `target="_blank" rel="noopener"`. Links to other
+  pages on this site, such as another blog post, stay in the same tab. When
+  republishing a post from Substack, add these to every outside link in the
+  body.
 - **Fonts.** Newsreader 600 (headings, variable optical size) and Inclusive
   Sans 400–700 plus italic 400 (body). They're subset to Latin plus the
   characters the pages use. If new text adds unusual characters (e.g. Polish
