@@ -1286,3 +1286,14 @@ span.tag { background: var(--panel); }
 /* ---------- Service cards: email button + "or book a call" ---------- */
 .svc-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
 .svc-cta__alt { color: var(--ink); font-weight: 500; text-underline-offset: 3px; }
+
+/* Testimonials: a single quote on its own sits centred at a readable width.
+   Remove the "testimonials--single" class from index.html once a second quote is live. */
+.testimonials--single {
+  grid-template-columns: 1fr;
+  max-width: 48rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.testimonials--single .testimonial { align-items: center; }
+.testimonials--single + .testimonials-more { text-align: center; margin-inline: auto; }
