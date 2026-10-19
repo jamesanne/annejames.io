@@ -1,3 +1,32 @@
+// Interface text the script adds to the page, picked by the page's <html lang>.
+var I18N = (function () {
+  var t = {
+    en: {
+      goToPost: 'Go to post ',
+      showAll: 'Show all posts',
+      allShown: function (n) { return 'Showing all ' + n + ' posts'; },
+      someShown: function (n, label) { return 'Showing ' + n + (n === 1 ? ' post' : ' posts') + ' tagged ' + label; },
+      emailBody: 'Hi Anne,\r\n\r\nOur organization:\r\nWhat we are working on:\r\nTiming:\r\n'
+    },
+    es: {
+      goToPost: 'Ir al artículo ',
+      showAll: 'Ver todos los artículos',
+      allShown: function (n) { return 'Mostrando los ' + n + ' artículos'; },
+      someShown: function (n, label) { return 'Mostrando ' + n + (n === 1 ? ' artículo' : ' artículos') + ' con la etiqueta ' + label; },
+      emailBody: 'Hola, Anne:\r\n\r\nNuestra organización:\r\nEn qué estamos trabajando:\r\nPlazos:\r\n'
+    },
+    pt: {
+      goToPost: 'Ir para o artigo ',
+      showAll: 'Ver todos os artigos',
+      allShown: function (n) { return 'A mostrar os ' + n + ' artigos'; },
+      someShown: function (n, label) { return 'A mostrar ' + n + (n === 1 ? ' artigo' : ' artigos') + ' com a etiqueta ' + label; },
+      emailBody: 'Olá, Anne,\r\n\r\nA nossa organização:\r\nEm que estamos a trabalhar:\r\nPrazos:\r\n'
+    }
+  };
+  var lang = (document.documentElement.lang || 'en').slice(0, 2);
+  return t[lang] || t.en;
+})();
+
 // Mobile nav toggle — no dependencies, ~0.5kb.
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
@@ -80,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cards.forEach(function (_, i) {
         var dot = document.createElement('button');
         dot.type = 'button';
-        dot.setAttribute('aria-label', 'Go to post ' + (i + 1));
+        dot.setAttribute('aria-label', I18N.goToPost + (i + 1));
         dot.addEventListener('click', function () {
           cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
         });
@@ -192,7 +221,7 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
     reset = document.createElement('button');
     reset.type = 'button';
     reset.className = 'filter-reset';
-    reset.textContent = 'Show all posts';
+    reset.textContent = I18N.showAll;
     reset.hidden = true;
     reset.addEventListener('click', function () { apply('all', true); });
     status.insertAdjacentElement('afterend', reset);
@@ -217,8 +246,8 @@ document.querySelectorAll('[data-filter-root]').forEach(function (root) {
     });
     if (status) {
       status.textContent = tag === 'all'
-        ? (barHidden ? '' : 'Showing all ' + shown + ' posts')
-        : 'Showing ' + shown + (shown === 1 ? ' post' : ' posts') + ' tagged ' + label;
+        ? (barHidden ? '' : I18N.allShown(shown))
+        : I18N.someShown(shown, label);
       status.hidden = barHidden && tag === 'all';
     }
     if (reset) reset.hidden = tag === 'all';
@@ -249,7 +278,7 @@ document.querySelectorAll('a.js-email').forEach(function (a) {
   var subject = a.getAttribute('data-subject');
   if (subject) {
     // Service buttons: pre-fill subject and a short prompt, keep the button's own label
-    var body = 'Hi Anne,\r\n\r\nOur organization:\r\nWhat we are working on:\r\nTiming:\r\n';
+    var body = I18N.emailBody;
     a.setAttribute('href', 'mai' + 'lto:' + addr + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body));
   } else {
     a.setAttribute('href', 'mai' + 'lto:' + addr);
