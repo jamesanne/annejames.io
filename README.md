@@ -31,50 +31,42 @@ Cloudflare until the domain moves to Infomaniak.
 - [x] Check `https://www.annejames.io` also shows a Let's Encrypt certificate
 - [x] Turn off GitHub Pages: repo → Settings → Pages → remove the custom
       domain and unpublish
-- [ ] Step 6: transfer the domain from GoDaddy to Infomaniak (paused 13 Oct,
-      to finish when funds are available). At GoDaddy, turn off Domain Lock
-      and get the authorization code. At Infomaniak, choose:
-      - Transfer annejames.io (€52.10, includes a year's renewal)
-      - Domain Privacy: **yes**. DNS Fast Anycast: no (or take the €4.90
-        "Domain Plus" bundle if Privacy can't be chosen alone)
-      - Website: **"No, I do not need a website right now"**
-      - Owner: yourself
-      - **Untick** "After the transfer has been completed, use the Infomaniak
-        DNS server" so the site stays up with no downtime
-      - Paste the authorization code
-      - Approve GoDaddy's outgoing-transfer email to speed things up (otherwise
-        it takes about 5 days)
-- [ ] Step 7: recreate the DNS records at Infomaniak, confirm the domain uses
-      Infomaniak's nameservers, then delete the site from Cloudflare and close
-      the account
-- [x] Delete the `CNAME` file. Only GitHub Pages used it
+- [x] Step 6: paid Infomaniak for the GoDaddy → Infomaniak transfer (14 Oct
+      2026). Transfer in progress (about 5 days). Leave GoDaddy's Domain Lock
+      off until it completes. Approve GoDaddy's outgoing-transfer email if one
+      arrives, and confirm any email Infomaniak sends
+- [ ] Step 7 (after the transfer completes): in Infomaniak's DNS zone for
+      annejames.io, delete any default records Infomaniak added, then create:
+      - `A` `@` → `95.217.26.94`
+      - `AAAA` `@` → `2a01:4f9:c01f:8002::`
+      - `CNAME` `www` → `annejamesio.statichost.page`
+      - "No mail" records, so nobody can send spoofed email as @annejames.io
+        (skip these if you set up kSuite email on the domain instead):
+        - `MX` `@` → `.` (priority 0, a "null MX")
+        - `TXT` `@` → `v=spf1 -all`
+        - `TXT` `_dmarc` → `v=DMARC1; p=reject;`
+
+      Then switch the domain's nameservers to Infomaniak's. Wait a day, check
+      that annejames.io and www still show a Let's Encrypt certificate, then
+      delete the site from Cloudflare and close the account
 - [ ] Ask statichost (hello@statichost.eu) whether a second site can go on the
       free plan, or what a second site costs
 
 ### 2. Share images and preview text (before calling the site done)
 Every page needs its title, meta description, `og:title`, `og:description`,
 `og:image` and `og:image:alt` reviewed. Share images are 1200×630.
-- [x] Default share image `images/share-default.jpg` replaced (it was the
-      headshot): split screen with Cai Fang's M+ photo from the home page on
-      the left and a plum panel on the right ("Anne James / Strategy and AI
-      governance for cultural spaces and tourism / annejames.io"). Used by
-      home, projects, about, contact, blog index, privacy and cookies. Always
-      "strategy" before "AI governance" in titles and copy
-- [x] Own share images for the services pages and case studies:
-      `images/services/museums-social.jpg` (community listening photo),
-      `images/services/tourism-social.jpg` (guest insight photo),
-      `images/projects/photoireland-social.jpg`, `images/projects/zymbol-social.jpg`
-- [x] `og:image:alt` updated on all 11 pages to describe the new images
-- [x] Blog share images and text reviewed: images match their alt text. Added
-      `og:url` (the annejames.io address) so a shared annejames.io link
-      previews as this site rather than falling back to the Substack canonical
-- [x] Fixed descriptions: privacy (said "EU-only hosting and analytics";
-      there are none), cookies (now says no cookies are set), and shortened
-      projects and about to under 160 characters
+- [ ] Create the default share image and upload it as `images/share-default.jpg`.
+      **It isn't in the repo yet**, so 11 English pages currently point to a
+      missing image: home, both services pages, projects, about, contact, blog
+      index, privacy, cookies and both case studies
+- [ ] Decide which pages get their own share image instead of the default
+      (e.g. the services pages and case studies)
+- [ ] Update `og:image:alt` on those 11 pages. It still says "Portrait of Anne
+      James", and the share image won't be your headshot
+- [ ] Review the share images and text for the six blog posts, which already
+      have their own `images/blog/*-social.jpg`
 - [ ] Preview each page in a link-preview checker (or by pasting the link into
-      LinkedIn Post Inspector, linkedin.com/post-inspector) after pushing.
-      LinkedIn caches previews for about 7 days, so re-inspect any page shared
-      before this change
+      LinkedIn) once the site is live on statichost
 
 ### 3. Privacy and cookies pages (English done; check before publishing)
 - [ ] Confirm or adjust the retention periods for email and bookings
@@ -153,11 +145,6 @@ statichost.yml            statichost.eu config: publish the repo root as-is
   `<a class="js-email" data-u="semajenna" data-d="moc.kite" href="#">`.
 - **Blog posts** keep their original Substack publish date and carry a
   canonical link and a visible link back to the original.
-- **Outside links open in a new tab.** Any link that leaves annejames.io
-  (Substack included) gets `target="_blank" rel="noopener"`. Links to other
-  pages on this site, such as another blog post, stay in the same tab. When
-  republishing a post from Substack, add these to every outside link in the
-  body.
 - **Fonts.** Newsreader 600 (headings, variable optical size) and Inclusive
   Sans 400–700 plus italic 400 (body). They're subset to Latin plus the
   characters the pages use. If new text adds unusual characters (e.g. Polish
