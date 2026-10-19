@@ -989,7 +989,7 @@ a.tag:hover, a.tag:focus-visible { background: var(--tag-hover); }
 .prose h3 { margin: 2em 0 0.5em; }
 .prose ul, .prose ol { padding-left: 1.4rem; margin: 0 0 1.3em; }
 .prose li { margin-bottom: 0.55em; }
-.prose a { text-decoration: underline; text-underline-offset: 3px; }
+.prose a:not(.btn) { text-decoration: underline; text-underline-offset: 3px; }
 .prose blockquote {
   margin: 2.2rem 0; padding: 0.25rem 0 0.25rem 1.5rem;
   border-left: 4px solid var(--plum);
@@ -1155,8 +1155,8 @@ input:focus, select:focus, textarea:focus { outline: 3px solid var(--ink); outli
 /* ---------- Article colour: let the plum do some work ----------
    Long posts were almost entirely gray. Plum (already the brand colour)
    now carries links, callout labels and table rules inside articles. */
-.prose a { color: var(--plum); text-decoration-color: rgba(99, 44, 89, 0.45); }
-.prose a:hover, .prose a:focus-visible { text-decoration-color: currentColor; }
+.prose a:not(.btn) { color: var(--plum); text-decoration-color: rgba(99, 44, 89, 0.45); }
+.prose a:not(.btn):hover, .prose a:not(.btn):focus-visible { text-decoration-color: currentColor; }
 .prose h2, .prose .callout h3 { color: var(--plum); }
 .prose blockquote { color: var(--plum); }
 .data-table thead th { border-bottom-color: var(--plum); }
