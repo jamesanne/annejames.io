@@ -1288,7 +1288,7 @@ span.tag { background: var(--panel); }
 .svc-cta__alt { color: var(--ink); font-weight: 500; text-underline-offset: 3px; }
 
 /* Testimonials: a single quote on its own sits centred at a readable width.
-   Remove the "testimonials--single" class from index.html once a second quote is live. */
+   Swap it for "testimonials--pair" in index.html when a second quote goes live. */
 .testimonials--single {
   grid-template-columns: 1fr;
   max-width: 48rem;
@@ -1297,3 +1297,5 @@ span.tag { background: var(--panel); }
 }
 .testimonials--single .testimonial { align-items: center; }
 .testimonials--single + .testimonials-more { text-align: center; margin-inline: auto; }
+/* Two quotes: two equal columns on wide screens instead of leaving the third column empty. */
+@media (min-width: 60em) { .testimonials--pair { grid-template-columns: repeat(2, 1fr); } }
