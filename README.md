@@ -23,7 +23,8 @@ visitor IP logging). Every push to this repository republishes the site.
   404.html                served by statichost for any missing page
 /case-studies/            case studies
 /blog/                    index.html + articles republished from Substack
-/es/  /pt/                Spanish and Portuguese
+/es/  /pt/                Spanish (Spain) and European Portuguese: every page except
+                          the blog posts, with case studies in /casos/
 /css/styles.css           one shared stylesheet
 /js/site.js               mobile nav, dropdowns, blog tag filter, email address
 /fonts/                   self-hosted WOFF fonts + their OFL licences
@@ -48,7 +49,13 @@ statichost.yml            statichost.eu config: publish the repo root as-is
   canonical link and a visible link back to the original. They're left out of
   `sitemap.xml` because their canonical URL is on Substack.
 - **Share images** are 1200×630 JPGs. Pages without their own use
-  `images/share-default.jpg`.
+  `images/share-default.jpg` (`-es` and `-pt` versions for the translations).
+- **Translations.** The Spanish and Portuguese pages mirror the English ones.
+  Change the English first, then make the same change in both translations.
+  Each page lists its other language versions in `hreflang` tags, and
+  `sitemap.xml` does the same. Blog posts stay English only, so their ES/PT
+  switcher goes to the translated Writing page. Text the script adds (the
+  blog filter and pre-filled email) is translated in `site.js`.
 - **404 page.** It can be served at any depth, so every link and asset in
   `404.html` uses a root-absolute path (`/css/styles.css`, not
   `css/styles.css`).

@@ -1,16 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Only pages whose canonical URL is on annejames.io. Blog posts are left out
-     because their canonical is the Substack original. The PhotoIreland case
-     study is left out while it's noindex. Add ES/PT pages once they're rebuilt. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://annejames.io/</loc></url>
-  <url><loc>https://annejames.io/services-museums.html</loc></url>
-  <url><loc>https://annejames.io/services-tourism.html</loc></url>
-  <url><loc>https://annejames.io/projects.html</loc></url>
-  <url><loc>https://annejames.io/case-studies/zymbol.html</loc></url>
-  <url><loc>https://annejames.io/blog/</loc></url>
-  <url><loc>https://annejames.io/about.html</loc></url>
-  <url><loc>https://annejames.io/contact.html</loc></url>
-  <url><loc>https://annejames.io/privacy.html</loc></url>
-  <url><loc>https://annejames.io/cookies.html</loc></url>
+<!-- Only pages whose canonical URL is on annejames.io, each with its ES and PT
+     versions. Blog posts are left out because their canonical is the Substack
+     original. The PhotoIreland case study is left out while it's noindex. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://annejames.io/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/services-museums.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-museums.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-museos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-museus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-museums.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/servicios-museos.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-museums.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-museos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-museus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-museums.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/servicos-museus.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-museums.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-museos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-museus.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-museums.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/services-tourism.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-tourism.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-tourism.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/servicios-turismo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-tourism.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-tourism.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/servicos-turismo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/services-tourism.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/servicios-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/servicos-turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/services-tourism.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/projetos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/projects.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/proyectos.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/projetos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/projects.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/projetos.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/projetos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/projects.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/case-studies/zymbol.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/case-studies/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/case-studies/zymbol.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/casos/zymbol.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/case-studies/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/case-studies/zymbol.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/casos/zymbol.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/case-studies/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/casos/zymbol.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/case-studies/zymbol.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/blog/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/blog/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/blog/"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/sobre.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/about.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/sobre-mi.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/sobre.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/about.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/sobre.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/sobre.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/about.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/contact.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/contact.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/contact.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/cookies.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/es/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/cookies.html"/>
+  </url>
+  <url>
+    <loc>https://annejames.io/pt/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://annejames.io/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://annejames.io/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://annejames.io/pt/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://annejames.io/cookies.html"/>
+  </url>
 </urlset>
